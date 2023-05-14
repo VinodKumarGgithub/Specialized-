@@ -9,13 +9,16 @@ body{
 font-family: 'Roboto Condensed', sans-serif;
 font-family: 'Wix Madefor Text', sans-serif;
 }
+#navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1c1c1c;
 
+}
 #nav{
     width: 90%;
-    position: fixed;
-    left: 5%;
-    top: 0;
-    overflow: hidden;
     margin: auto;
     padding-top:20px ;
     padding-bottom: 10px;
@@ -23,7 +26,6 @@ font-family: 'Wix Madefor Text', sans-serif;
     justify-content: space-between;
     color: aliceblue;
     font-size: 13px;
-   background-color: #1c1c1c;
     border-bottom: 1px solid white;
 }
 #nav_search_box input{
@@ -81,11 +83,58 @@ outline: none;
 text-decoration: none;
  color: aliceblue;
 }
+#nav-end .profile{
+    background-color: transparent;
+    color: aliceblue;
+    border: none;
+}
+#nav-end .profile:hover{
+    cursor: pointer;
+}
+/* ________sub______nav */
+
+
+#subnav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    
+    /* border: 1px solid red; */
+    align-items: center;
+}
+
+#subnav div:last-child a{ 
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(167, 159, 159);
+}
+#subnav div:first-child{
+    color: rgb(167, 159, 159);
+}
+
+#subnav div:first-child span{
+    color: aliceblue;
+}
+#subnav div:first-child{
+    width: 170px;
+    display: flex;
+   align-items: center;
+}
+
+#subnav div:first-child img{
+    width: 22px;
+    height: 22px;
+    /* border: 1px solid pink; */
+}
+
 
 /* __________footer___________ */
 
 #footer{
-    margin-top:50px;
+    padding-top:250px;
+    /* background-color: pink; */
+    /* border: 1px solid green; */
     width: 90%;
     margin: auto;
     color: aliceblue;
