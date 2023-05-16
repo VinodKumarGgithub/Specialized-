@@ -9,6 +9,9 @@ body{
       font-family: 'Raleway', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;
 font-family: 'Wix Madefor Text', sans-serif;
+width: 100%;
+overflow-x: hidden;
+position: absolute;
 }
 #navbar{
     width: 100%;
@@ -130,6 +133,53 @@ text-decoration: none;
     /* border: 1px solid pink; */
 }
 
+/* main */
+
+.h_bestseller{
+    border: 1px solid red;
+    width: 90%;
+    margin:0 auto;
+    margin-top: 20vh;
+
+}
+.h_bestseller div{
+    width: 80%;
+    margin: auto;
+}
+
+.h_bcycles{
+    display: flex;
+    border: 1px solid greenyellow;
+}
+.h_bestseller>div:first-child{
+    width: 80%;
+margin: auto;
+}
+.h_bestseller>div:last-child{
+    width: 80%;
+    margin:5% auto;
+    border: 1px solid green;
+}
+.h_bestseller>div:last-child>div:last-child{
+    margin-top: 20vh;
+}
+
+#cat{
+    border: 2px solid #c68409;
+    background-color: transparent;
+    padding:13px 30px ;
+    border-radius: 5px;
+    font-size: 15px;
+    margin:40px 10px ;
+    color: aliceblue;
+}
+
+
+
+
+
+
+
 
 /* __________footer___________ */
 
@@ -215,22 +265,20 @@ text-decoration: none;
 .newsletter div input::placeholder{
     font-size: 17px;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Wix Madefor Text', sans-serif;
 }
-.newsletter p{
+.newsletter p, .newsletter {
     font-size: 13px;
-    font-family: 'Raleway', sans-serif;
       font-family: 'Raleway', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;
 font-family: 'Wix Madefor Text', sans-serif;
     font-weight: 500;
     padding-right:30px ;
     line-height: 20px;
+    color: #747474;
 }
 .newsletter #terms_con{
     text-decoration: underline;
+    color: #747474;
 }
 .newsletter div button{
     width: 29%;
@@ -280,7 +328,8 @@ font-family: 'Wix Madefor Text', sans-serif;
     cursor: pointer;
     color: #c68409;
     accent-color: #c68409;
-   
+    outline-style: hidden;
+    background-color: transparent;
   }
   
   
@@ -291,7 +340,7 @@ font-family: 'Wix Madefor Text', sans-serif;
   
   input[type=radio]:checked {
     opacity: 1;
-    
+     background-color: transparent;
     accent-color: #c68409;
     /* #c68409 */
   }
@@ -507,3 +556,366 @@ font-weight: lighter;
     padding: 0;
     margin: 0;
 }
+
+/* ___________Login_____________ */
+
+/* _________________login CSS_____________ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Lato, sans-serif
+}
+
+#login {
+    /* padding:0px 25px; */
+    border: none;
+    border-radius: 8px;
+}
+
+
+#login_popup {
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #262626f7, #422f0b9f);
+    position: fixed;
+   
+    top: 50%;
+    left: 50%;
+    padding: 50px;
+    max-width: 500px;
+    box-sizing: border-box;
+    padding: 50px;
+    z-index: 9999;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+
+#login_popup>h3 {
+    line-height: normal;
+    color: aliceblue;
+    font-size: 24px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#login_popup>p:nth-child(2) {
+    font-size: 13px;
+    /* font-weight: 600; */
+    
+    line-height: 20px;
+    color: aliceblue;
+}
+
+#login_popup img {
+width: 0%;
+}
+
+#login_line {
+    content: "";
+    background: #dcdcdc;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 40px;
+    height: 1px;
+    top: 50%;
+    left: 0;
+}
+
+h5 {
+    position: relative;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 4px;
+}
+
+#login_popup input {
+    font-size: 13px;
+    font-weight: 540;
+    line-height: 20px;
+    border: 1px solid gray;
+    padding: 15px ;
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    color: antiquewhite;
+}
+#login_popup input::placeholder{
+    color: #6d6d6d;
+}
+#login_popup input:focus {
+    outline: none;
+    color: antiquewhite;
+    background: transparent;
+    background-color: transparent;
+}
+
+#login_btn,
+#OTP_btn,
+.otp_btn {
+    width: 100%;
+    background: transparent;
+    color: antiquewhite;
+    font-size: 13px;
+    /* font-weight: 600; */
+    text-align: center;
+    padding: 20px 0;
+    text-transform: uppercase;
+    margin-top: 30px;
+    display: block;
+    border: 1px solid #c68409;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login_btn,
+#OTP_btn {
+    outline: none;
+}
+
+h5>span {
+    position: relative;
+    background: #fbfbfb;
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 125px;
+}
+
+#login_fg {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#login_skip {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+}
+
+p+#close {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: #c68409;
+    cursor: pointer;
+    border: 1px solid #c68409;
+    padding: 4px 8px;
+    border-radius: 90%;
+}
+
+#ph_number+span,
+#OTP+span,
+#OTP_enterd+span,
+#OTP+span {
+    font-size: 12px;
+    color: #b32828;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 18px;
+}
+
+#mail_sent {
+    font-size: 12px;
+    color: rgb(62, 193, 62);
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 18px;
+}
+
+#box {
+    /* display: none; */
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    
+    /* margin-top:-50px ; */
+    height: 100vw;
+    width: 100%;
+    z-index: 4;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    z-index: 20;
+    /* border-radius: 5px; */
+    transform: translate(-50%, -50%);
+}
+
+.otp a,
+#forgot_pass {
+    color: antiquewhite;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+#otp_forgot {
+    display: flex;
+    justify-content: space-between;
+}
+
+#otp_forgot>div {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+#otp_forgot>div input {
+    width: 15px;
+}
+
+@media screen and (max-width: 480px) {
+ 
+    
+    #home{
+        width: 30%;
+    }
+    #home img{
+        width: 90%;
+    }
+    #nav-mid>div:first-child,#nav-mid>div:last-child{
+        display: none;
+    }
+    #nav_search_box{
+        width:70%;
+     margin-left: 20px;
+    }
+
+    #nav-end{
+        width:100px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #nav-end>a{
+        display: none;
+    }
+    #nav-end button{
+         font-size: 90%;
+        }
+  
+   #subnav{
+    width: 100%;
+    margin-top: 70px;
+   margin-left: -20px;
+}
+#subnav div:last-child a{ 
+    padding: 5px;
+    font-size: 80%;
+}
+#subnav div:first-child span{
+    font-size: 90%;
+}
+
+#subnav div:first-child{
+    width: 120px;
+    display: flex;
+   align-items: center;
+   font-size: 80%;
+}
+
+#subnav div:first-child img{
+    width: 15%;
+   height: 15%;
+}
+
+input[type=radio] {
+    top: 10%;
+    left: 115%;
+    width: 10px;
+    height: 15px;
+
+    margin: 2px 15px 0 0;
+    opacity: 0.2;
+    accent-color: #c68409;
+  }
+ 
+
+  #footer{
+    padding-left: 10px;
+}
+
+.Social_media{
+    width: 0%;
+}
+.Social_media div:first-child {
+   display: none;
+ }
+
+ .Social_media div:last-child{
+    /* width: 80%; */
+    margin-top: 100px;
+    font-size: 30%;
+ }
+ 
+.footer_top{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    font-size: 70%;
+}
+.abouth{
+    width: 100%;
+   display: flex;
+   justify-content: space-evenly;
+}
+.abouth>div{
+margin:0px 6px ;
+}
+.abouth div a{
+    /* font-weight: 600; */
+ padding: 4px 0px;
+}
+
+.newsletter{
+    width: 250px;
+    margin-top: 150px;
+    margin-left: -150px;
+}
+.newsletter div{
+    margin-top: 5px;
+    width: 60%;
+    height: 50%;
+ /* border: 1px solid red; */
+}
+
+.newsletter div input{
+    height: 30px;
+    width: 70%;
+    border-radius:5px 0px 0px 5px;
+}
+.newsletter div input::placeholder{
+    font-size: 9px;
+}
+.newsletter p{
+    font-size: 9px;
+    line-height: 14px;
+}
+.newsletter div button{
+    height: 36px;
+    padding-bottom:1px;
+    /* border: 2px dolid #747474; */
+    border-radius: 0px 5px 5px 0px;
+    font-size: 11px;
+    font-weight: 550;
+}
+.footer-bottom{
+    padding-top:30px ;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: auto;
+    font-size: 8px;
+}
+.abouth>div:last-child,.abouth>div:nth-child(5){
+    display: none;
+}
+  }
