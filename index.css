@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&family=Wix+Madefor+Text:wght@600&display=swap');
+ 
 
 /* nav____________________ */
 body{
@@ -5,13 +7,32 @@ body{
     padding: 0;
     background-color:#1f2322;
     color: aliceblue;
-    font-size: 13px;
-      font-family: 'Raleway', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Wix Madefor Text', sans-serif;
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 width: 100%;
 overflow-x: hidden;
 position: absolute;
+}
+#sugge_box{
+    display: none;
+    width: 30vh;
+    position: fixed;
+    left: 49.5%;
+    top: 10%;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background-color: #262626eb;
+}
+#sugge_box div{ 
+    padding:2px 10px ;
+    height: 1rem;
+    overflow: hidden;
+    border-radius: 8px;
+    color: aliceblue;
+}
+#sugge_box div:hover{
+    background-color: #353333e0;
 }
 #navbar{
     width: 100%;
@@ -21,8 +42,10 @@ position: absolute;
     z-index: 2;
     overflow: hidden;
     background-color: #1c1c1c;
+    font-family: 'Quicksand', sans-serif;
 }
 #nav{
+    font-family: 'Wix Madefor Display', sans-serif;
     width: 90%;
     margin: auto;
     padding-top:20px ;
@@ -33,6 +56,10 @@ position: absolute;
     color: aliceblue;
     font-size: 13px;
     border-bottom: 1px solid white;
+}
+#nav p{
+    
+    font-weight: 500;
 }
 #nav_search_box input{
     margin: 0;
@@ -83,6 +110,7 @@ outline: none;
     display: flex;
     align-items: center;
     justify-content: space-around;
+   
 }
 
 #nav a{
@@ -113,6 +141,7 @@ text-decoration: none;
     padding: 10px;
     text-decoration: none;
     color: rgb(167, 159, 159);
+    font-weight: 580;
 }
 #subnav div:first-child{
     color: rgb(167, 159, 159);
@@ -136,29 +165,77 @@ text-decoration: none;
 /* main */
 
 .h_bestseller{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 90%;
     margin:0 auto;
     margin-top: 20vh;
 
 }
 .h_bestseller div{
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
 .h_bcycles{
     display: flex;
-    border: 1px solid greenyellow;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 20px;
+    justify-content: space-between;
+}
+.h_bcycles>div{
+    width: 20%;
+    padding:10px 20px;
+    height: 50vh;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    box-shadow: #422F0B 0px 7px 30px 4px, #422F0B 0px 2px 16px 0px;
+    /* box-shadow: #422F0B 5px 10px 15px 5px; */
+}
+.h_bcycles>div img+p{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5em;
+    height: 3em;       /* height is 2x line-height, so two lines will display */
+    overflow: hidden;
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+
+.h_bcycles>div p+p{
+    font-size: 21px;
+    line-height: 6px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+.h_bcycles>div p+div{
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: 0%;
+    padding: 0;
+    
+}
+.h_bcycles>div button{
+    background-color: transparent;
+    border: 2px solid rgba(128, 128, 128, 0.679);
+    padding:4px ;
+    margin-right: 6px;
+    border-radius: 5px;
+}
+.h_bcycles>div img{
+height: 50%;
+width:90%;
+margin: auto;
 }
 .h_bestseller>div:first-child{
-    width: 80%;
+    width: 84%;
 margin: auto;
+/* margin-left:-15px ; */
+font-size:33px;
+letter-spacing: 3px;
 }
 .h_bestseller>div:last-child{
     width: 80%;
     margin:5% auto;
-    border: 1px solid green;
 }
 .h_bestseller>div:last-child>div:last-child{
     margin-top: 20vh;
@@ -170,11 +247,15 @@ margin: auto;
     padding:13px 30px ;
     border-radius: 5px;
     font-size: 15px;
-    margin:40px 10px ;
+    margin:40px 42px ;
     color: aliceblue;
 }
 
-
+.h_bestseller>div:last-child{
+    font-size: 33px;
+    margin-left: 100px;
+    letter-spacing: 3px;
+}
 
 
 
@@ -241,6 +322,7 @@ margin: auto;
     display: flex;
     flex-direction: column;
     margin: 0px auto;
+    color: aliceblue;
 }
 .newsletter div{
     margin-top: 20px;
@@ -266,11 +348,8 @@ margin: auto;
     font-size: 17px;
     text-align: center;
 }
-.newsletter p, .newsletter {
+.newsletter p {
     font-size: 13px;
-      font-family: 'Raleway', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Wix Madefor Text', sans-serif;
     font-weight: 500;
     padding-right:30px ;
     line-height: 20px;
@@ -278,7 +357,9 @@ font-family: 'Wix Madefor Text', sans-serif;
 }
 .newsletter #terms_con{
     text-decoration: underline;
-    color: #747474;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: aliceblue;
 }
 .newsletter div button{
     width: 29%;
@@ -296,6 +377,15 @@ font-family: 'Wix Madefor Text', sans-serif;
     padding-top:80px ;
     text-align: center;
     margin: auto;
+    font-size: 13px;
+    font-weight: 590;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.footer-bottom p{
+    font-family: 'Wix Madefor Display', sans-serif;
+    padding-bottom: 40px;
 }
 
 /* top____slider-section */
@@ -305,7 +395,6 @@ font-family: 'Wix Madefor Text', sans-serif;
     width: 90%;
     height: 39vw;
     margin: 10px auto;
-    font-family: 'Helvetica Neue', sans-serif;
     perspective: 1400px;
     transform-style: preserve-3d;
     /* box-shadow: #422F0B 0px 5px 15px; */
@@ -418,6 +507,8 @@ font-family: 'Wix Madefor Text', sans-serif;
 }
 .h-knowmore>div:first-child{
     margin-left: 80px;
+    font-size: 33px;
+    letter-spacing: 3px;
 }
 #h-km_img img{
     width: 100%;
@@ -453,14 +544,14 @@ font-family: 'Wix Madefor Text', sans-serif;
     width: 40%;
     /* line-height: 25px; */
     padding:80px 0px ;
-    font-family: Helvetica,sans-serif;
+    
     font-size: .875rem;
     line-height: 1.75rem;
 }
 
-.h_btech h3{
-font-size: 20px;
-font-weight: lighter;
+.h_btech h4{
+font-size: 25px;
+letter-spacing: 2px;
 }
 
 .h_btech button,.bikesTopdis button{
@@ -476,6 +567,8 @@ font-weight: lighter;
     width: 79%;
     margin:19vh auto;
     border: 1px solid red;
+    font-size: 30px;
+    letter-spacing: 3px;
 }
 
 /* bottom poster */
@@ -506,8 +599,8 @@ font-weight: lighter;
     margin-left: -92%;
     background-image: url(./logos/bottomban\ \(3\).jpg);
     z-index: 1;
-    background-color: #070707d1;
-    filter: brightness(90%);
+    /* background-color: #070707d1; */
+    filter: brightness(100%);
     border-radius: 8px;
 }
 
@@ -525,6 +618,12 @@ font-weight: lighter;
 .h-bottom-poster>div:last-child h3{
     font-size: 32px;
     margin: 0;
+    letter-spacing: 3px;
+}
+.h-bottom-poster>div p{
+    font-size: 12px;
+    font-weight: 550;
+    letter-spacing: 1px;
 
 }
 
@@ -539,6 +638,8 @@ font-weight: lighter;
 .h-bottom-poster>div:last-child input::placeholder{
     padding-left:15px ;
     font-size: 15px;
+    font-weight: 550;
+    letter-spacing: 2px;
 }
 .h-bottom-poster>div:last-child button{
     background-color: transparent;
@@ -553,6 +654,7 @@ font-weight: lighter;
     font-size: 32px;
     line-height: 18px;
     /* background-color: #422F0B; */
+    letter-spacing: 3px;
     padding: 0;
     margin: 0;
 }
@@ -560,12 +662,6 @@ font-weight: lighter;
 /* ___________Login_____________ */
 
 /* _________________login CSS_____________ */
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Lato, sans-serif
-}
 
 #login {
     /* padding:0px 25px; */
@@ -838,8 +934,93 @@ input[type=radio] {
     opacity: 0.2;
     accent-color: #c68409;
   }
- 
 
+.h_bestseller>div:first-child{
+ width: 84%;
+margin: auto;
+/* margin-left:-15px ; */
+font-size:17px;
+letter-spacing: 2px;
+}
+
+#cat{
+    border: 2px solid #c68409;
+    background-color: transparent;
+    padding:13px 20px ;
+    border-radius: 5px;
+    font-size: 15px;
+    margin:40px 30px ;
+    color: aliceblue;
+}
+
+.h_bestseller>div:last-child{
+    font-size: 17px;
+    margin-left: 43px;
+    letter-spacing: 2px;
+}
+
+
+
+
+.h_bcycles{
+    grid-template-columns: repeat(1,1fr);
+}
+.h_bcycles>div{
+    height: 45vh;
+    margin-bottom: 10px;
+   
+}
+
+.h_bcycles>div p+div{
+    /* border: 1px solid red; */
+    width: 50%;
+    
+}
+
+.h_btech{
+    display: flex;
+    margin: auto;
+    width: 90%;
+    /* border: 1px solid red; */
+    box-shadow:  #422F0B 0px 5px 15px;
+    border-radius: 8px;
+    background-image: url(./logos/02-MTB-2185-Hero-2800x1620-Roots-1536x864.jpg);
+}
+.h_btech div:first-child{
+    width: 100%;
+    /* line-height: 25px; */
+    padding:10px 19px ;
+}
+
+.h_btech h4{
+font-size: 13px;
+letter-spacing: 1px;
+}
+.h_btech h4+p{
+font-size: 8px;
+line-height: 15px;
+}
+
+.h_btech button,.bikesTopdis button{
+   font-size: 10px;
+}
+
+.bikesTopdis{
+    width: 84%;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.h-knowmore{
+    width: 90%;
+    margin: auto;
+    color: aliceblue;
+    font-size: 20px;
+}
+.h-knowmore>div:first-child{
+    margin-left: 10px;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
   #footer{
     padding-left: 10px;
 }
@@ -908,6 +1089,9 @@ margin:0px 6px ;
     font-size: 11px;
     font-weight: 550;
 }
+#footer #terms_con{
+    font-size: 7px;
+}
 .footer-bottom{
     padding-top:30px ;
     padding-bottom: 20px;
@@ -918,4 +1102,59 @@ margin:0px 6px ;
 .abouth>div:last-child,.abouth>div:nth-child(5){
     display: none;
 }
+
+#h-bottom_posterBlur{
+    margin-top:50px;
+    margin-bottom: -80px;
+  
+}
+
+
+.h-bottom-poster>div:first-child {
+    width: 90%;
+    margin:15px ;
+}
+.h-bottom-poster>div:last-child{
+    margin:40px ;
+}
+.h-bottom-poster>div:last-child h3{
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+.h-bottom-poster>div p{
+    font-size: 8px;
+    letter-spacing: 1px;
+
+}
+
+.h-bottom-poster>div:last-child input{
+    width: 80%;
+    border-radius: 5px;
+    margin:10px 0px;
+    padding:10px 0px ;
+    color: white;
+}
+.h-bottom-poster>div:last-child input:focus{
+    outline: none;
+}
+.h-bottom-poster>div:last-child input::placeholder{
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.h-bottom-poster>div:last-child button{
+    width: 80%;
+    padding: 10px 0px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.h-bottom-poster>div:first-child  h3{
+    font-size: 17px;
+    line-height: 10px;
+    /* background-color: #422F0B; */
+    letter-spacing: 2px;
+    padding: 0;
+    margin: 0;
+}
   }
+
+  

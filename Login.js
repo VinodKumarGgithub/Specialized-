@@ -5,7 +5,7 @@ import { otpPage, loginPage } from "./otp.js";
 
 // Checking login ?
 let log_status = localStorage.getItem("logged") || "";
-console.log(log_status,"................");
+
 // if (log_status) {
 
 //     document.getElementById('profile_dropdown').onchange = ()=>{
@@ -206,6 +206,7 @@ console.log(user);
       } else {
         obj.ph = input;
         obj.Password = password;
+        obj.login_status =true
         user.push(obj);
       }
       //   post data {number}
@@ -282,27 +283,29 @@ console.log(user);
       wrong_pass.style.display = "none";
       console.log("succfull..by number", Otp, enterd_pass);
       alert(`Your Temporary password :- ${password}`);
-    //   localStorage.setItem("logged", true);
+      localStorage.setItem("logged", user.length);
       window.location.href="index.html"
     }
   }
 
-  if (!log_status) {
-    document.getElementById("close").addEventListener("click", closePopup);
+  // if (!log_status) {
+  //   document.getElementById("close").addEventListener("click", closePopup);
 
-    function closePopup() {
-      document.getElementById("box").style.display = "none";
-    }
+  //   function closePopup() {
+  //     document.getElementById("box").style.display = "none";
+  //   }
 
-    // show
+  //   // show
 
-    document.querySelector(".profile").addEventListener("click", showPopup);
-    // document.getElementById("Signup").addEventListener("click", showPopup);
+  //   document.querySelector(".profile").addEventListener("click", ()=>{
+  //         log_status? alert(`${log_status}`):showPopup()
+  //       });
+  //   // document.getElementById("Signup").addEventListener("click", showPopup);
 
-    function showPopup() {
-      document.getElementById("box").style.display = "block";
-    }
-  }
+  //   function showPopup() {
+  //     document.getElementById("box").style.display = "block";
+  //   }
+  // }
 }
 
 if (!log_status) {
@@ -315,14 +318,18 @@ if (!log_status) {
     document.querySelector("#ph_number+span").style.display = "none";
   }
 
+
   // show
-
-  document.querySelector(".profile").addEventListener("click", showPopup);
-  // document.getElementById("Signup").addEventListener("click", showPopup);
-
+  document.querySelector(".profile").addEventListener("click",showPopup);
   function showPopup() {
     document.querySelector("#ph_number+span").style.display = "none";
     document.getElementById("box").style.display = "block";
+  }
+}else{
+  document.querySelector(".profile").addEventListener("click",foo);
+
+  function foo(){
+    alert(`already logeed`)
   }
 }
 

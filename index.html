@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Roboto+Condensed:wght@400;700&family=Wix+Madefor+Text:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&family=Wix+Madefor+Text:wght@600&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Roboto+Condensed:wght@400;700&family=Wix+Madefor+Text:wght@600&display=swap" rel="stylesheet"> -->
 </head>
 <body>
     <div id="navbar">
@@ -26,8 +32,10 @@
                 <a href="#">KIDS</a>
                </div>
                <div id="nav_search_box">
-                <input type="search" placeholder="search...">
+                <input type="search" placeholder="Search" id="search">
                 <button><i class="fa-solid fa-magnifying-glass fa-bounce fa-sm" style="color: #ffffff;"></i></button>
+               </div>
+               <div id="sugge_box">
                </div>
                <div>
                 <p>+38 044 679 38 67</p>
@@ -35,7 +43,7 @@
             </div>
             <div id="nav-end">
                 <a href="#"><i class="fa-regular fa-heart fa-xl"></i></a>
-                <a href="#"><i class="fa-solid fa-circle-nodes fa-xl"></i></a>
+                <a href="#"><img src="./logos/compare.svg" alt=""></a>
                 <a href="#"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
                 <button class="profile"><i class="fa-regular fa-user fa-lg"></i></button>
             </div>
@@ -72,28 +80,34 @@
 <!-- Choose our best seller -->
   <div class="h_bestseller"> 
     <div>
-        <h2>CHOOSE OUR BEST SELLERS</h2>
+        <h4>CHOOSE OUR BEST SELLERS</h4>
     </div>
 
     <div class="h_bcycles">
-        <div>
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <div> <button>h</button></div>
+        <!-- <div>
+            <img src="https://assets.specialized.com/i/specialized/91522-71_ROCKHOPPER-29-OLVGRN-BLK_HERO?$hybris-pdp-hero$" alt="">
+            <p>Rockhopper 29</p>
+            <p id="price">$499.99</p>
+            <div> <button><i class="fa-regular fa-heart fa-lg"></i></button>
+                <button><i class="fa-regular fa-heart fa-lg"></i></button> 
+            </div>
         </div>
         <div>
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <div><button>h</button> </div>
+            <img src="https://assets.specialized.com/i/specialized/91822-64_ROCKHOPPER-SPORT-29-BLZ-ICEPPYA_HERO?$hybris-pdp-hero$" alt="">
+            <p>Rockhopper Sport 29</p>
+            <p>$ 579.99</p>
+            <div><button><i class="fa-regular fa-heart fa-lg"></i></button> 
+                <button><i class="fa-regular fa-heart fa-lg"></i></button> 
+            </div>
         </div>
         <div>
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <div><button>h</button></div>
-        </div>
+            <img src="https://assets.specialized.com/i/specialized/93321-70_SJ-ALLOY-BLK-SMK_HERO?$hybris-pdp-hero$" alt="">
+            <p>Stumjumper Alloy</p>
+            <p>$2,099.99</p>
+            <div><button><i class="fa-regular fa-heart fa-lg"></i></button>
+                <button><i class="fa-regular fa-heart fa-lg"></i></button> 
+            </div>
+        </div> -->
     </div>
     
 
@@ -102,7 +116,7 @@
     </div>
 
     <div>
-        <h2>BRAIN TECHNOLOGY</h2>
+        <h4>BRAIN TECHNOLOGY</h4>
     </div>
 
   </div>
@@ -111,7 +125,7 @@
 
   <div class="h_btech">
     <div>
-        <h3>ROOTS OF THE BRAIN</h3>
+        <h4>ROOTS OF THE BRAIN</h4>
         <p>In 2002 we introduced a shock with a mind of its own, and revolutionized bicycle suspension
            Integral to the winningest full suspension XC bikes ever, Brain technology has come a long way
            over the past two decades, but the all-new Brain is still in a class by itself when it comes to
@@ -125,7 +139,7 @@
 
   <!-- bIKES DOSC -->
   <div class="bikesTopdis">
-    <h2>BIKE DISCOUNTS OF THIS MONTH</h2>
+    <h4>BIKE DISCOUNTS OF THIS MONTH</h4>
    <div>
 
    </div>
@@ -135,7 +149,7 @@
   <!-- KNow more about us -->
   <div class="h-knowmore">
     <div>
-        <h3>KNOW MORE ABOUT US</h3>
+        <h4>KNOW MORE ABOUT US</h4>
     </div>
     <div id="h-km_img">
         <div>
@@ -153,7 +167,7 @@
     <div class="h-bottom-poster">
        <div>
         <div>
-            <h3>15 000</h3>
+            <h3 >15 000</h3>
             <p>buyers per month</p>
         </div>
         <div>
