@@ -20,7 +20,7 @@ main()
 function displaydata(data){
 document.querySelector(".h_bcycles").textContent=""
 data.map(function(ele,i){
-    if(i>10&&i<=13){
+    
     let box = document.createElement("div")
     box.addEventListener("click",()=>{
         localStorage.setItem("item",ele.id);
@@ -31,7 +31,7 @@ data.map(function(ele,i){
     let title = document.createElement("p")
     title.textContent=ele.productdescriptionname
     let price = document.createElement("p")
-    price.textContent= ele.price
+    price.textContent= `€ ${ele.price}`
     price.setAttribute("id","price")
     if(ele.mrp){
     let mrp = document.createElement("p")
@@ -48,12 +48,24 @@ data.map(function(ele,i){
     compare_btn.innerHTML=`<i class="fa-solid fa-code-compare"></i>`
     button_box.append(wish_btn,compare_btn)
     box.append(img,title,price,button_box)
+    if(i>10&&i<=13){
     document.querySelector(".h_bcycles").append(box)
-}
+   }else if(i>13&&i<17) {
+    document.querySelector("#bikesDis").append(box)
+  }
 })
 }
 
 
+
+
+
+
+
+
+
+
+// _____________Search_box____________
 document.getElementById("search").addEventListener("keyup",search)
 let timer
 function search(){

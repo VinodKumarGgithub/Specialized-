@@ -168,7 +168,8 @@ text-decoration: none;
     /* border: 1px solid red; */
     width: 90%;
     margin:0 auto;
-    margin-top: 20vh;
+    margin-top: 5vh;
+    overflow: hidden;
 
 }
 .h_bestseller div{
@@ -176,13 +177,13 @@ text-decoration: none;
     margin: auto;
 }
 
-.h_bcycles{
+.h_bcycles,#bikesDis{
     display: flex;
     grid-template-columns: repeat(3,1fr);
     row-gap: 20px;
     justify-content: space-between;
 }
-.h_bcycles>div{
+.h_bcycles>div,#bikesDis>div{
     width: 20%;
     padding:10px 20px;
     height: 50vh;
@@ -192,39 +193,49 @@ text-decoration: none;
     box-shadow: #422F0B 0px 7px 30px 4px, #422F0B 0px 2px 16px 0px;
     /* box-shadow: #422F0B 5px 10px 15px 5px; */
 }
-.h_bcycles>div img+p{
+
+.h_bcycles>div img+p,#bikesDis>div img+p{
     font-size: 20px;
     font-weight: 700;
-    line-height: 1.5em;
-    height: 3em;       /* height is 2x line-height, so two lines will display */
+    line-height: 1.2em;
+    height: 1.2em;       /* height is 2x line-height, so two lines will display */
     overflow: hidden;
     font-family: 'Wix Madefor Display', sans-serif;
 }
 
-.h_bcycles>div p+p{
+.h_bcycles>div p+p,#bikesDis>div p+p{
     font-size: 21px;
     line-height: 6px;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
 }
-.h_bcycles>div p+div{
+.h_bcycles>div p+div,#bikesDis>div p+div{
     /* border: 1px solid red; */
     width: 50%;
     margin: 0%;
     padding: 0;
     
 }
-.h_bcycles>div button{
+.h_bcycles>div button,#bikesDis>div button{
+    font-size: 15px;
     background-color: transparent;
     border: 2px solid rgba(128, 128, 128, 0.679);
     padding:4px ;
     margin-right: 6px;
+    color: rgba(16, 15, 15, 0.777);
     border-radius: 5px;
 }
-.h_bcycles>div img{
+
+.h_bcycles>div img ,#bikesDis>div img{
 height: 50%;
 width:90%;
 margin: auto;
+}
+#bikesDis+button{
+    margin-top: 80px;
+    font-size: 15px;
+    border-radius: 5px;
+    padding:10px 40px;
 }
 .h_bestseller>div:first-child{
     width: 84%;
@@ -240,7 +251,9 @@ letter-spacing: 3px;
 .h_bestseller>div:last-child>div:last-child{
     margin-top: 20vh;
 }
-
+.h_bestseller #h_bcycles{
+    margin-left:45px;
+}
 #cat{
     border: 2px solid #c68409;
     background-color: transparent;
@@ -342,7 +355,6 @@ letter-spacing: 3px;
 }
 .newsletter div input:focus{
     outline: #747474;
-    
 }
 .newsletter div input::placeholder{
     font-size: 17px;
@@ -566,7 +578,6 @@ letter-spacing: 2px;
 .bikesTopdis{
     width: 79%;
     margin:19vh auto;
-    border: 1px solid red;
     font-size: 30px;
     letter-spacing: 3px;
 }
@@ -634,6 +645,10 @@ letter-spacing: 2px;
     border-radius: 5px;
     margin:10px 0px;
     padding:10px 0px ;
+}
+.h-bottom-poster>div:last-child input:focus{
+    outline: none;
+    
 }
 .h-bottom-poster>div:last-child input::placeholder{
     padding-left:15px ;
@@ -841,6 +856,7 @@ p+#close {
     box-sizing: border-box;
     z-index: 20;
     /* border-radius: 5px; */
+    font-family: 'Wix Madefor Display', sans-serif;
     transform: translate(-50%, -50%);
 }
 
@@ -962,16 +978,16 @@ letter-spacing: 2px;
 
 
 
-.h_bcycles{
+.h_bcycles,#bikesDis{
     grid-template-columns: repeat(1,1fr);
 }
-.h_bcycles>div{
+.h_bcycles>div,#bikesDis>div{
     height: 45vh;
     margin-bottom: 10px;
    
 }
 
-.h_bcycles>div p+div{
+.h_bcycles>div p+div,#bikesDis>div p+div{
     /* border: 1px solid red; */
     width: 50%;
     

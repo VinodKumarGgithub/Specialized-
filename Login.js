@@ -350,3 +350,9 @@ async function postdata(obj) {
     console.log(error);
   }
 }
+
+
+
+
+// card____-slider
+
