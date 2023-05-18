@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialized</title>
+    <style>
+        body{
+            background-color: rgb(131, 122, 109);
+        }
+        #header{
+            height: 30%;
+            background-color: rgb(94, 89, 89) ;
+        }
+        #footer{
+            height: 30%;
+        }
+        main{
+            /* background-color: aqua; */
+            
+        }
+        #mainDiv{
+            display: flex;
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 7px;
+        }
+        #mainDiv input{
+            width: 12%;
+            margin: 0px 5px;
+            text-align: center;
+        }
+    
+        #mainDiv div{
+            margin: auto;
+            margin-left: 10px;
+/*  */
+            /* border: 1px solid red; */
+        }
+        #mainDiv img{
+            height: 120px;
+            /* border: 1px solid black; */
+            /* margin-left: 30%; */
+            /* padding: 30%     ; */
+        }
+        
+        #mainDiv div:nth-child(5){
+            /* border: 1px solid black; */
+            /* width: 15%; */
+        }
+            #dellogo{
+            width: 35%;
+            margin: auto;
+            padding-left: 10px;            
+
+            /* border: 1px solid red; */
+        }
+        #delcart{
+            background-color: white;
+            border: none;        }
+         
+        #mainDiv div:nth-child(2){
+            margin-left: 20px;
+            width: 85%;
+
+            /* border: 2px solid green; */
+        }
+        #mainDiv div:nth-child(3) button:nth-child(1){
+            /* margin-left: 0px; */
+            /* width: 15%; */
+            margin-left: 20px;
+            /* margin: auto; */
+        }
+        #mainDiv div:nth-child(4){
+            /* margin-left: 0px;     */
+            width: 30%;
+            padding:0% 1%;
+            /* margin: auto; */
+        }
+        #orderitem{
+            width: 65%;
+            margin: auto;
+            /* border: 1px solid black; */
+            padding: 20px;
+        }
+
+        #orderitem h2  {
+            color: white ;
+        }
+        #orderitem h3 {
+            color: white ;
+        }
+        #orderDetails{
+            display: flex;
+            width: 65%;
+            border: 1px solid black;
+            padding: 15px 10px;
+            background-color: white;
+            border-radius: 7px;
+            
+        }
+        
+        
+        #detailsAmount{
+            display: flex;
+            margin: auto;
+        }
+        #orderDetails div{
+            margin: 5px;
+            
+        }
+        /* #orderDetails {
+            margin-left: 30%;
+            
+        } */
+        #amount{
+            border: 1px solid black;
+            display: flex;
+            width: 34%;
+            padding: 10px;
+            margin-left: 10px;
+            background-color: white;
+            border-radius: 7px;
+        }
+        #amount button{
+            height: 23%;
+            background-color: red;
+            color: white;
+            padding: 12px;
+            border-radius: 3px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/ad020c6830.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div id="orderitem">
+        <p><i class="fa-solid fa-house"></i> --- Your Order</p>
+        <h2>YOUR ORDER</h2>
+        <div id="cart">
+
+        </div>
+        <h3>WE RECOMMEND:</h3>
+        <div>
+        <i></i>
+        <div id="recommend"></div>
+        <i></i>
+        </div>
+        
+        <div id="detailsAmount">
+
+        <div id="orderDetails">
+            <div>
+                <i class="fa-solid fa-truck fa-2xl"></i>
+                <p>FAST DELIVERY</p>
+                <p>We will deliver your within 48 hours</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-gear fa-2xl"></i>
+                <p>IMPECCABLE SERVICE</p>
+                <p>We will help you to assemble the bike after delivery</p>
+            </div>
+            <div>
+                <i class="fa-regular fa-credit-card fa-2xl"></i>
+                
+                <p>SECURE PAYMENT</p>
+                <p>We use 3D-secure to protect all payments</p>
+            </div>
+        </div>
+        <div id="amount">
+            <div><p>TOTAL:</p></div>
+            <div>            
+                <p>Rs. 15,000/-</p>
+                <p>Rs. 13,000/-</p>
+            <button>MAKE AN ORDER</button>
+            </div>
+  
+        </div>
+    </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
+
+<script>
+    let obj=[
+        {
+            name:"S-WORKS TURBO KENEVO SL",
+           img:"https://www.shutterstock.com/image-photo/yellow-black-29er-mountainbike-thick-260nw-1498702814.jpg",
+           id:7895647,
+           amt: 15000, 
+           fyamt: 6000, 
+
+        },
+        {
+           name:"S-WORKS TURBO KENEVO SL",
+           img:"https://www.shutterstock.com/image-photo/yellow-black-29er-mountainbike-thick-260nw-1498702814.jpg",
+           id:7895647,
+           amt: 15000, 
+           fyamt: 6000  
+        },
+        {
+           name:"S-WORKS TURBO KENEVO SL",
+           img:"https://www.shutterstock.com/image-photo/yellow-black-29er-mountainbike-thick-260nw-1498702814.jpg",
+           id:7895647,
+           amt: 15000, 
+           fyamt: 6000  
+        }    
+    ]
+
+        localStorage.setItem("cart",JSON.stringify(obj));
+        // JSON.parse(localStorage.getItem("cart")) || []
+        let data= obj;
+        data.push(obj);
+
+        let cartItem=document.querySelector("#cart");
+        displayCart(data);
+    function displayCart(data){
+        document.querySelector("#cart").textContent="";
+        data.map(((ele,i)=>{
+            
+            let div=document.createElement("div");
+            div.id="mainDiv";
+            let divImg=document.createElement("div");
+            divImg.id="imgDiv";
+            let img=document.createElement("img");
+            img.src=ele.img;
+            let divDetails=document.createElement("div");
+            divDetails.id="detail";
+            let name=document.createElement("h5");
+            name.textContent=ele.name
+            let code=document.createElement("p");
+            code.textContent=ele.id;
+            let MRP=document.createElement("p");
+            MRP.textContent=ele.amt;
+            let amt=document.createElement("p");
+            amt.textContent=ele.fyamt;
+
+            let qty=document.createElement("div");
+            
+            let disc=document.createElement("button");
+            disc.textContent="-";
+            disc.addEventListener('click',function(){
+                if(qnty.value==1){
+                    alert("Minimum Quantity could be 1")
+                }else {
+                    qnty.value--;
+                    finamt.textContent="Rs. "+ 6000 *qnty.value + "/-";
+                }
+            })
+            let qnty=document.createElement("input");
+            qnty.value="1";
+            let add=document.createElement("button");
+            add.textContent="+";
+            add.addEventListener('click',function(){
+                    qnty.value++;
+                    finamt.textContent="Rs. "+ 6000 *qnty.value + "/-";
+                
+            })
+
+            let divFinalAmt=document.createElement("div");
+            let finamt=document.createElement("p");
+            finamt.textContent="Rs. "+ 6000 *qnty.value + "/-";
+
+            let delet=document.createElement("div");
+            let del=document.createElement("button");
+            
+            del.id="delcart";
+            let delimg=document.createElement("img");
+            delimg.src="delet.svg";
+            delimg.id="dellogo";
+            del.addEventListener("click",function(){
+                data.splice(i,1);
+                // localStorage.setItem("cart".JSON.stringify(data))
+                displayCart(data);
+                document.querySelector("#cartItem").textContent=""; 
+            })
+
+            divImg.append(img);
+            del.append(delimg);
+
+            divDetails.append(name,code,MRP,amt);
+            qty.append(disc,qnty,add);
+            divFinalAmt.append(finamt);
+            delet.append(del);
+            div.append(divImg, divDetails, qty, divFinalAmt, delet);
+            cartItem.append(div);          
+
+        }))
+    } 
+
+
+
+
+</script>
