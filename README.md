@@ -15,14 +15,14 @@ Specialized Pages's
   - Login/signup<br />
 
 *Himanshu<br />
-  -Catagory  <br />
+  - Catagory  <br />
 
 *Amit<br />
- -Item page  <br />
+ - Item page  <br />
 
 *Shreedhar <br />
- -Order page.   <br />
- 
+ - Order page.   <br />
+
 *Sarita    <br />
- -Payment <br />
- -Wishlist <br />
+ - Payment <br />
+ - Wishlist <br />
