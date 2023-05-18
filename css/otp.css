@@ -1,7 +1,10 @@
 Body {
+  margin-top: 100px;
+  margin-top: 500px;
     margin: 0;
     padding: 0;
-    background-color: #f3f7fb;
+    /* background-color: #f3f7fb; */
+    background-color: #1f2322;
     height: 100vh;
   }
   
@@ -29,14 +32,18 @@ Body {
     font-family: Arimo;
     font-size: 20px;
     caret-color: transparent;
-    background: #1b95a0;
-    color: #f3f7fb;
+    /* background: #0b1d1f; */
+    background: #0cc443;
+    /* color: #f3f7fb; */
   }
   
   H1 {
     text-align: Center;
     font-family: Arimo;
-    color: #1b95a0;
+    /* color: #237981; */
+      /* color: #0e1a1b; */
+      color: #019aa8;
+      margin-top: 20px;
   }
   #btn {
       display: flex;
@@ -47,7 +54,7 @@ Body {
   Button {
     width: 150px;
     height: 40px;
-    /* margin: 25px Auto 0px Auto; */
+    
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -57,12 +64,14 @@ Body {
     padding: 10px 0;
   }
   button:hover {
-    background-color: rgb(3, 90, 3);
+    /* background-color: rgb(3, 90, 3); */
+    background: #596461;
   }
   #verify {
       color: rgb(25, 194, 25);
       text-align: center;
       font-size: 50px;
+      margin-bottom: 50px;
   }
   #para {
       display: flex;
@@ -70,10 +79,10 @@ Body {
   }
   p {
       margin-top: -10px;
-      margin-bottom: -150px;
+      margin-bottom: -100px;
       font-size: 20px;
       width: 30%;
       text-align: center;
-      color: rgb(67, 67, 67);
+      color: rgb(238, 227, 227);
   }
   

@@ -10,15 +10,17 @@
 }
 
 .container{
+  
   display: flex;
   justify-content: center;
   align-items: center;
   padding:25px;
   min-height: 100vh;
-  background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%);
+  background: #1f2322;
 }
 
 .container form{
+  box-shadow: #422F0B 0px 10px 20px !important;
   padding:20px;
   width:700px;
   background: #fff;
@@ -28,7 +30,7 @@
 .container form .row{
   display: flex;
   flex-wrap: wrap;
-  gap:19px;
+  gap:25px;
 }
 
 .container form .row .col{
@@ -47,14 +49,14 @@
 }
 
 .container form .row .col .inputBox span{
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   display: block;
 }
 
 .container form .row .col .inputBox input{
   width: 100%;
   border:1px solid #ccc;
-  padding:10px 15px;
+  padding:10px 10px;
   font-size: 15px;
   text-transform: none;
 }
@@ -65,7 +67,7 @@
 
 .container form .row .col .flex{
   display: flex;
-  gap:15px;
+  gap:20px;
 }
 
 .container form .row .col .flex .inputBox{
@@ -79,15 +81,25 @@
 }
 
 .container form .submit-btn{
-  width: 100%;
+  width: 50%;
+ 
+  align-content: center;
+  text-align: center;
+  border-radius: 30px;
   padding:12px;
   font-size: 17px;
-  background: #27ae60;
+  background: #1f2322;
   color:#fff;
   margin-top: 5px;
   cursor: pointer;
 }
 
 .container form .submit-btn:hover{
-  background: #2ecc71;
+  /* background: #2ecc71; */
+  background:#506d65
+
+   
+}
+#btn{
+  text-align: center;
 }
