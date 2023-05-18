@@ -27,9 +27,22 @@ data.map(function(ele,i){
         // window.location.href="#"
     })
     let img = document.createElement("img")
-    img.src=ele.img
+    
     let title = document.createElement("p")
-    title.textContent=ele.productdescriptionname
+
+    if(i==0 || i==11){
+        img.src="./logos/s-works1.png"
+        title.textContent = "S-Works Shiv TT Disc"
+    }else if(i==1 || i==29){
+        img.src="./logos/s-work2.png"
+        title.textContent = "S-works tarmac sl7"
+    }else if(i==2 || i==12){
+        img.src="./logos/s-work3.png"
+        title.textContent = "Turbo Levo Pro"
+    }else{
+        img.src=ele.img
+        title.textContent=ele.productdescriptionname
+    }
     let price = document.createElement("p")
     price.textContent= `€ ${ele.price}`
     price.setAttribute("id","price")
