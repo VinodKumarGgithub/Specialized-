@@ -13,12 +13,16 @@ Specialized Pages's
 *Vinod Kumar G<br />
   - Home <br />
   - Login/signup<br />
+
 *Himanshu<br />
   -Catagory  <br />
+
 *Amit<br />
  -Item page  <br />
+
 *Shreedhar <br />
  -Order page.   <br />
+ 
 *Sarita    <br />
  -Payment <br />
  -Wishlist <br />
