@@ -60,6 +60,7 @@ function displayproduct(data){
         '<span class="reviews-text"> 4.9</span>';
 
         let colorandsizediv = document.createElement("div");
+        colorandsizediv.setAttribute('class', 'colorandsizediv');
         let colordiv= document.createElement("div");
         let colortext= document.createElement("p");
         colortext.textContent="Color";
@@ -74,6 +75,9 @@ function displayproduct(data){
         //
         let sizediv = document.createElement("div")
         sizediv.setAttribute("class", "sizediv")
+
+        sizetext= document.createElement("p")
+        sizetext.textContent="Size";
         var xsBox = document.createElement("div");
         xsBox.textContent = "XS";
         xsBox.classList.add("xsmall-box");
@@ -86,12 +90,53 @@ function displayproduct(data){
         mBox.textContent = "M";
         mBox.classList.add("M-box");
 
-        sizediv.append(xsBox, sBox, mBox)
+        let sizeboxdiv= document.createElement("div");
+        sizeboxdiv.setAttribute("class", "sizeboxdiv");
+        sizeboxdiv.append(xsBox, sBox, mBox)
+        sizediv.append(sizetext,sizeboxdiv)
 
         colordiv.append(colortext, brownButton, blackButton);
         colorandsizediv.append(colordiv, sizediv)
 
-        document.getElementById("innerrightdiv").append(name, starDiv, colorandsizediv)
+        //price code
+
+        let mrp= document.createElement("h4");
+        mrp.innerText=elem.mrp;
+        mrp.setAttribute("class", "mrp")
+        mrp.style.textDecoration = "line-through";
+        let price= document.createElement("h3");
+        price.innerText=elem.price;
+        price.setAttribute("class", "price")
+        
+        let pricediv= document.createElement("div");
+        pricediv.append(mrp, price)
+
+        let hr= document.createElement("hr");
+        hr.setAttribute("class", "hr");
+        let hr2= document.createElement("hr");
+        hr2.setAttribute("class", "hr2");
+        let addtocartandquickorderdiv= document.createElement("div");
+        addtocartandquickorderdiv.setAttribute("class", "addtocartandquickorderdiv")
+        let addtocartbtn= document.createElement("button");
+        addtocartbtn.setAttribute("class","addtocartbtn");
+        addtocartbtn.addEventListener("click", function(){
+            
+        })
+        addtocartbtn.textContent = "ADD TO CART";
+
+        let quickorderbtn= document.createElement("button");
+        quickorderbtn.setAttribute("class","quickorderbtn");
+        quickorderbtn.textContent="QUICK ORDER"
+
+        let wishlistbtn= document.createElement("button");
+        wishlistbtn.setAttribute("class","wishlistbtn");
+        let heartIcon = document.createElement("i");
+        heartIcon.setAttribute("class", "fas fa-heart");
+        wishlistbtn.appendChild(heartIcon);
+
+        addtocartandquickorderdiv.append(addtocartbtn,quickorderbtn, wishlistbtn);
+
+        document.getElementById("innerrightdiv").append(name, starDiv, colorandsizediv,pricediv,hr,addtocartandquickorderdiv, hr2)
 
     })}
 
@@ -109,3 +154,22 @@ function displayproduct(data){
             });
         });
     }
+
+// const showMoreBtn = document.getElementById("showMoreBtn");
+// const moreDivs = document.querySelectorAll(".more");
+
+// showMoreBtn.addEventListener("click", function() {
+//     moreDivs.forEach(function(div) {
+//     div.classList.toggle("show");
+//     });
+// });
+
+
+const readMoreLink = document.getElementById("readMoreLink");
+const moreParagraph = document.querySelector("#description .more");
+
+readMoreLink.addEventListener("click", function(event) {
+  event.preventDefault();
+  moreParagraph.classList.toggle("show");
+  readMoreLink.textContent = moreParagraph.classList.contains("show") ? "- Read Less" : "+ Read More";
+});

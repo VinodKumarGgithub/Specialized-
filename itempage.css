@@ -5,7 +5,7 @@ body{
     background-color: #464445;
 }
 
-h2,p{
+h2,h3,p{
     color: #f1f1f3;
 }
 
@@ -25,7 +25,7 @@ h2,p{
 
 #rightdiv{
     width: 50%;
-    border: 1px solid ;
+    
 }
 
 #mainimage{
@@ -46,8 +46,8 @@ h2,p{
 #imagecontainer{
     /* display: flex; */
     /* border: 1px solid; */
-    flex-grow: 1;
-    width: calc(33.33% - 5px);
+    /* flex-grow: 1;
+    width: calc(33.33% - 5px); */
 }
 
 #smallimages{
@@ -64,8 +64,8 @@ h2,p{
 }
 #smallimages img{
     /* width: 70%; */
-    /* width: 51px; */
-    max-height: 51px;
+    width: 90px;
+    height: 51px;
     /* padding-left: 10px;
     padding-right: 10px; */
     /* margin-left: 18px; */
@@ -104,15 +104,19 @@ h2,p{
 /* Ride side div */
 .star-icon {
     color: rgb(152, 110, 3);
+    font-size: x-large;
 }
 .reviews-text{
-    font-size: 12px;
+    font-size: 15px;
     color: #a7a4a4;
 }
 
 #innerrightdiv{
     width: 90%;
     margin: auto;
+}
+#innerrightdiv > h2{
+    margin-top: 5px;
 }
 
 .circle-button {
@@ -135,8 +139,12 @@ h2,p{
 }
 
 .sizediv{
+    margin-left: 15px;;
+}
+.sizeboxdiv{
     display: flex;
     gap: 5px;
+
 }
 
 .small-box, .xsmall-box, .M-box {
@@ -148,4 +156,288 @@ h2,p{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.colorandsizediv{
+    display: flex;
+    gap: 30px;
+}
+
+
+.price{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+.mrp{
+    margin-bottom: 5px;
+    font-weight: 100;
+    color: #ababab;
+}
+/* Add to cart */
+
+.addtocartandquickorderdiv{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fa-heart{
+    font-size: 25px;
+    color:#db1f22;
+}
+
+.wishlistbtn{
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    height: 38px;
+    border-radius: 4px;
+    width: 38px;
+}
+.addtocartbtn {
+  background-color: #db1f22;
+  border: 1px solid #db1f22;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  /* padding: 10px 25px; */
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 140px;
+  height: 38px;
+}
+
+
+.quickorderbtn {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    /* padding: 10px 25px; */
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 140px;
+    height: 38px;
+  }
+
+
+.addtocartbtn:hover , .quickorderbtn:hover{
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+.hr{
+    margin-bottom: 25px;
+    border-color: #a7a4a4;
+    border-width: 2px;
+}
+.hr2{
+    margin-top: 25px;
+    border-color: #a7a4a4;
+    border-width: 2px;
+}
+
+/* Static code  */
+/* Middle */
+
+#middlecomp{
+    display: flex;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#leftcomp{
+width: 50%;
+}
+
+#rightcomp{
+    width: 50%;
+}
+
+#characteristics{
+    background-color: #fdfdfd;
+    margin: auto;
+    border-radius: 5px;
+}
+
+#characteristics  h3{
+    color: #0f100f ;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+.carheadingdiv{
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    align-items: center;
+}
+#characteristics hr{
+    width: 94%;
+}
+.carheadingdiv p{
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #363736 ;
+}
+
+.more {
+    display: none;
+  }
+  
+.show {
+display: block;
+}
+
+#description{
+    background-color: #fdfdfd;
+    margin: auto;
+    border-radius: 5px;
+    
+}
+
+#description h3{
+    color: #0f100f ;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+#description p{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #363736 ;
+    font-size: 13px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+#readMoreLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(168, 168, 49);
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+.icon{
+    color: rgb(168, 168, 49);
+}
+  
+
+
+/*  */
+
+
+/* Rating box */
+#rating_div {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+#rtbox {
+    display: flex;
+}
+#rtsec {
+    color: #1AAB2A;
+    /* margin-top: -20px;
+    margin-bottom: -20px; */
+}
+#rbox_1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 12%;
+    padding-bottom: 10px;
+    border-right: 1px solid rgb(240, 240, 240);
+}
+ #rbox_1  h3{
+    color: #0f100f;
+}
+
+/* Three column layout */
+.side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.middle {
+    margin-top:15px;
+    float: left;
+    width: 70%;
+}
+
+  /* Place text to the right */
+.right {
+    text-align: right;
+}
+
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+  /* The bar container */
+.bar-container {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+  /* Individual bars */
+.bar-5 {
+    border-radius: 10px;
+    width: 60%; height: 10px; background-color: #1AAB2A;
+}
+.bar-4 {
+    border-radius: 10px;
+    width: 30%; height: 10px; background-color: #1AAB2A;
+}
+.bar-3 {
+    border-radius: 10px;
+    width: 12%; height: 10px; background-color: #1AAB2A;
+}
+.bar-2 {
+    border-radius: 10px;
+    width: 10%; height: 10px; background-color: orange;
+}
+.bar-1 {
+    border-radius: 10px;
+    width: 15%; height: 10px; background-color: red;
 }
