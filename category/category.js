@@ -1,7 +1,7 @@
 
 
 
-let url = `https://specialized.onrender.com/products`
+let url = `https://specialized.onrender.com/products?_limit=24`
 const fetchdata =async (path)=>{
    try {
     let res = await fetch(`${path}`)
@@ -23,9 +23,7 @@ main()
 function displaydata(data){
     document.querySelector("#products").textContent=""
     data.map(function(ele,i){
-        if(i==0){
-            return
-        }
+       
         let box = document.createElement("div")
         box.addEventListener("click",()=>{
             localStorage.setItem("item",ele.id);
@@ -71,7 +69,7 @@ function search(event){
     // console.log(event.key)
     timer = setTimeout(async ()=>{
         // console.log(query);
-      let data =await fetchdata(`https://specialized.onrender.com/products?q=${query}`)
+      let data =await fetchdata(`https://specialized.onrender.com/products?q=${query}&_limit=24`)
         // console.log(data);
         suggetion_box(data)
         if(event.key=="Enter")
@@ -114,13 +112,13 @@ document.getElementById("select").addEventListener("change",sort)
 async function sort(){
    let s= document.getElementById("select").value;
    if(s=="l-h"){
-   let data = await fetchdata(`https://specialized.onrender.com/products?_sort=price&_order=asc`)
+   let data = await fetchdata(`https://specialized.onrender.com/products?_sort=price&_order=asc&_limit=24`)
    displaydata(data)
    }else if(s=="h-l"){
-    let data = await fetchdata(`https://specialized.onrender.com/products?_sort=price&_order=desc`)
+    let data = await fetchdata(`https://specialized.onrender.com/products?_sort=price&_order=desc&_limit=24`)
     displaydata(data)
    }else if(s=="relevance"){
-    let data = await fetchdata(`https://specialized.onrender.com/products`)
+    let data = await fetchdata(`https://specialized.onrender.com/products?&_limit=24`)
     displaydata(data)
    }
 }
