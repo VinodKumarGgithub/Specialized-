@@ -374,3 +374,8 @@ background-color: white;
  padding:6px;
  margin-right: 15px;
 }
+
+#newdiv{
+    display: flex;
+    
+}
