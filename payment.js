@@ -40,3 +40,7 @@ function carddata() {
   }
 }
 
+
+let price = localStorage.getItem('price') || 0;
+
+document.getElementById('price').textContent = `₹ ${price}`;
