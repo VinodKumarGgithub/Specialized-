@@ -1,0 +1,569 @@
+
+/* nav____________________ */
+
+/* suggestion box */
+#sugge_box{
+    display: none;
+    width: 30vh;
+    position: fixed;
+    left: 49.5%;
+    top: 10%;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background-color: #262626eb;
+}
+#sugge_box div{ 
+    padding:2px 10px ;
+    height: 1rem;
+    overflow: hidden;
+    border-radius: 8px;
+    color: aliceblue;
+}
+#sugge_box div:hover{
+    background-color: #353333e0;
+}
+
+
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#1c1c1c;
+    font-size: 13px;
+
+font-family: 'Wix Madefor Text', sans-serif;
+}
+#navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1c1c1c;
+
+}
+#nav{
+    width: 90%;
+    margin: auto;
+    padding-top:20px ;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    font-size: 13px;
+    border-bottom: 1px solid white;
+}
+#nav_search_box input{
+    margin: 0;
+    border: none;
+    padding:10px;
+    border-radius:16px 0px 0px 16px;
+    height: 100%;
+    width: 80%;
+    background-color: #1c1c1c;
+    color: aliceblue;
+}
+#nav_search_box input:focus{
+border: none;
+outline: none;
+}
+#nav_search_box button{
+    margin-left: -4px;
+    border: none;
+    border-radius:0px 16px 16px 0px;
+    height: 100%;
+    width: 20%;
+    background-color: #1c1c1c;
+    color: aliceblue;
+}
+#nav_search_box{
+    width: 25%;
+    height: 30px;
+    padding: 2px;
+    border-radius: 50px;
+ border: 2px solid aliceblue;
+}
+
+#nav-mid{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+}
+
+#nav-mid>div:first-child{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#nav-end{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nav a{
+text-decoration: none;
+ color: aliceblue;
+}
+#nav-end .profile{
+    background-color: transparent;
+    color: aliceblue;
+    border: none;
+}
+#nav-end .profile:hover{
+    cursor: pointer;
+}
+/* ________sub______nav */
+
+
+#subnav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    
+    /* border: 1px solid red; */
+    align-items: center;
+}
+
+#subnav div:last-child a{ 
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(167, 159, 159);
+}
+#subnav div:first-child{
+    color: rgb(167, 159, 159);
+}
+
+#subnav div:first-child span{
+    color: aliceblue;
+}
+#subnav div:first-child{
+    width: 170px;
+    display: flex;
+   align-items: center;
+}
+
+#subnav div:first-child img{
+    width: 22px;
+    height: 22px;
+    /* border: 1px solid pink; */
+}
+
+
+/* __________footer___________ */
+
+#footer{
+    padding-top:10px;
+    /* background-color: pink; */
+    /* border: 1px solid green; */
+    z-index: 100;
+   
+    width: 90%;
+    margin: auto;
+    color: aliceblue;
+    margin-top: 90px;
+}
+#footer a{
+   text-decoration: none;
+   color: aliceblue;
+}
+.Social_media{
+    width: 15%;
+    display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+}
+.Social_media div{
+    display: flex;
+   /* align-items: center; */
+ }
+
+ .Social_media div:last-child{
+    width: 80%;
+    display: flex;
+    color: aliceblue;
+    justify-content: space-between;
+ }
+ 
+.footer_top{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+.abouth{
+    width: 65%;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.abouth div{
+    display: flex;
+    flex-direction: column;
+}
+
+.abouth div a{
+    font-size: 94%;
+    /* font-weight: 600; */
+   
+ padding: 8px 0px;
+}
+
+.newsletter{
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+}
+.newsletter div{
+    margin-top: 20px;
+    width: 80%;
+    height: 80%;
+ /* border: 1px solid red; */
+}
+
+.newsletter div input{
+    height: 40px;
+    width: 70%;
+    border-radius:10px 0px 0px 10px;
+    background-color: #1c1c1c;
+    border: 2px solid #747474;
+    color: aliceblue;
+    text-align: justify;
+}
+.newsletter div input:focus{
+    outline: #747474;
+    
+}
+.newsletter div input::placeholder{
+    font-size: 17px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+.newsletter p{
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+
+    font-weight: 500;
+    padding-right:30px ;
+    line-height: 20px;
+}
+.newsletter #terms_con{
+    text-decoration: underline;
+}
+.newsletter div button{
+    width: 29%;
+    height: 45px;
+    padding-bottom: 4px;
+    border: none;
+    /* border: 2px dolid #747474; */
+    border-radius: 0px 10px 10px 0px;
+    margin-left: -10px;
+    background-color: #747474;
+    color: #1c1c1c;
+    font-size: 16px;
+}
+.footer-bottom{
+    padding-top:80px ;
+    text-align: center;
+    margin: auto;
+   
+}
+
+#main{
+    width: 90%;
+    margin: auto;
+    padding:80px 5%;
+    margin-top: 120px;
+    background-color: #484448;
+}
+#main>div:first-child{
+    display: flex;
+    justify-content: flex-end;
+}
+#main>div:first-child select{
+    border: none;
+    background-color: #484448;
+    color: aliceblue;
+    margin: 0px 10px;
+}
+#main>div:first-child option{
+    background-color: transparent;
+    border-radius: 5px;
+}
+#maindiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#maindiv>div:first-child{
+    width: 15%;
+    font-size: 20px;
+}
+#maindiv>div:last-child{
+    width: 80%;
+}
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    margin-top: 30px;
+}
+.pagination ul{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    list-style-type: none;
+    /* border: 1px solid red; */
+    margin-right: 10%;
+}
+
+.pagination ul li{
+    border: 2px solid rgba(107, 104, 104, 0.592);
+    padding: 8px 15px;
+    font-size: 14px;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.pagination ul li:hover{
+    background-color: #63635e;
+    border: 2px solid rgba(240, 248, 255, 0.56);
+    transform: scale(1.1);
+}
+#filterdiv{
+    color: white;
+    margin-top: -110px;
+    padding-top: 0;
+}
+#filterdiv>div{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid rgba(128, 128, 128, 0.329) ;
+    padding:20px 0px ;
+    z-index: -10;
+}
+#filterdiv>div button{
+    border: none;
+    background-color: transparent;
+  color: aliceblue;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+#filterdiv>div div{
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+#sorting{
+    display: flex;
+    color: aliceblue;
+    margin-bottom: 5px;
+    justify-content: flex-end;
+}
+#select{
+    background-color:transparent;
+    color: aliceblue;
+    border: none;
+    
+}
+#select option{
+    background-color: transparent;
+}
+#select:focus{
+    outline: none;
+    background-color: transparent;
+}
+#products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+#productsdiv{
+    width: 74%;
+    margin: 50px 0px;
+    margin-left: 20%;
+    
+}
+
+#products>div{
+background-color: white;
+    border-radius: 5px;
+    height: 50vh;
+   padding: 10px 15px;
+   box-shadow: #422F0B 0px 7px 30px 4px, #422F0B 0px 2px 16px 0px;
+}
+#products>div img+p{
+    font-size: 18px;
+    line-height: 1.5em;
+    height: 1.4em;       /* height is 2x line-height, so two lines will display */
+    overflow: hidden; 
+}
+#products>div p+p{
+    font-size: 15px;
+    line-height: 10px;
+    color: #201e1e;
+    font-weight: lighter;
+}
+#products>div p+p+p{
+    line-height: 0px;
+    font-weight: lighter;
+    color: #4340439e;
+    font-size: 15px;
+}
+#products div img{
+    height: 60%;
+    width:80%;
+    margin: auto;
+}
+
+#products>div button{
+ border: 2px solid grey;
+ border-radius: 5px ;
+ font-size: 10px;
+ background-color: transparent;
+ padding:6px;
+ margin-right: 15px;
+}
+
+/* main div products styling
+
+#maindiv{
+    background-color: #4a4949;
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filterdiv{
+    color: white;
+    margin: auto;
+    margin-left: 2%;
+    width: 14%;
+   position: fixed;
+   left: 2%;
+   font-family: 'Raleway', sans-serif;
+   top: 24%;
+}
+
+#filterdiv>div{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid rgba(128, 128, 128, 0.329) ;
+    padding:20px 10px ;
+    z-index: -10;
+}
+#filterdiv>div button{
+    border: none;
+    background-color: transparent;
+  color: aliceblue;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+#filterdiv>div div{
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+#sorting{
+    display: flex;
+    color: aliceblue;
+    margin-bottom: 5px;
+    justify-content: flex-end;
+}
+#select{
+    background-color: #4a4949;
+    color: aliceblue;
+    border: none;
+    
+}
+#select:focus{
+    outline: none;
+}
+#products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+#productsdiv{
+    width: 74%;
+    margin: 50px 0px;
+    margin-left: 20%;
+    
+}
+
+#products>div{
+background-color: white;
+    border-radius: 5px;
+    height: 50vh;
+   padding: 10px 15px;
+   box-shadow: #422F0B 0px 7px 30px 4px, #422F0B 0px 2px 16px 0px;
+}
+#products>div img+p{
+    font-size: 18px;
+}
+#products>div p+p{
+    font-size: 17px;
+    color: #4a4949;
+    font-weight: lighter;
+}
+#products div img{
+    height: 60%;
+    width:80%;
+    margin: auto;
+}
+
+#products>div button{
+ border: 2px solid grey;
+ border-radius: 5px ;
+ font-size: 10px;
+ background-color: transparent;
+ padding:6px;
+ margin-right: 15px;
+}
+
+#newdiv{
+    display: flex;
+    
+}
+
+.container{
+
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    color: #383838;
+    padding: 10px 40px;
+    border-radius: 6px;
+
+}
+
+ul{
+    margin: 20px 30px;
+}
+
+ul li{
+    display: inline-block;
+    margin: 0 10px;
+    background: #ccc;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 45px;
+    cursor: pointer;
+} */
