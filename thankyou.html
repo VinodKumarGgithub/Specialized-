@@ -4,9 +4,268 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="https://www.specialized.com/_ui/addons/specializedstorefrontaddon/desktop/common/images/favicon.ico?v=1.1"/>
     <title>Payment Successful</title>
     <link rel="icon" type="images/x-icon" href="https://bstudio-assets.azureedge.net/assets-builder/uploads/application/new_app_builder_icon/5b8cd7920b82ec2d09173049/Netmeds.svg" sizes="96x96"/>
+    <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"  />
+    <script src="https://kit.fontawesome.com/f5664c1180.js"  crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Roboto+Condensed:wght@400;700&family=Wix+Madefor+Text:wght@600&display=swap" rel="stylesheet">
+
     <style>
+      /* ______________nabar__________ */
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color:#1c1c1c;
+  font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Wix Madefor Text', sans-serif;
+}
+#navbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1c1c1c;
+
+}
+#nav{
+  width: 90%;
+  margin: auto;
+  padding-top:20px ;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+  font-size: 13px;
+  border-bottom: 1px solid white;
+}
+#nav_search_box input{
+  margin: 0;
+  border: none;
+  padding:10px;
+  border-radius:16px 0px 0px 16px;
+  height: 100%;
+  width: 80%;
+  background-color: #1c1c1c;
+  color: aliceblue;
+}
+#nav_search_box input:focus{
+border: none;
+outline: none;
+}
+#nav_search_box button{
+  margin-left: -4px;
+  border: none;
+  border-radius:0px 16px 16px 0px;
+  height: 100%;
+  width: 20%;
+  background-color: #1c1c1c;
+  color: aliceblue;
+}
+#nav_search_box{
+  width: 25%;
+  height: 30px;
+  padding: 2px;
+  border-radius: 50px;
+border: 2px solid aliceblue;
+}
+
+#nav-mid{
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+}
+
+#nav-mid>div:first-child{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#nav-end{
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#nav a{
+text-decoration: none;
+color: aliceblue;
+}
+#nav-end .profile{
+  background-color: transparent;
+  color: aliceblue;
+  border: none;
+}
+#nav-end .profile:hover{
+  cursor: pointer;
+}
+/* ________sub______nav */
+
+
+#subnav{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  
+  /* border: 1px solid red; */
+  align-items: center;
+}
+
+#subnav div:last-child a{ 
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(167, 159, 159);
+}
+#subnav div:first-child{
+  color: rgb(167, 159, 159);
+}
+
+#subnav div:first-child span{
+  color: aliceblue;
+}
+#subnav div:first-child{
+  width: 170px;
+  display: flex;
+ align-items: center;
+}
+
+#subnav div:first-child img{
+  width: 22px;
+  height: 22px;
+  /* border: 1px solid pink; */
+}
+
+
+/* __________footer___________ */
+
+#footer{
+  /* background-color: pink; */
+  /* border: 1px solid green; */
+  width: 90%;
+  margin: auto;
+  color: aliceblue;
+  margin-top: 90px;
+}
+#footer a{
+ text-decoration: none;
+ color: aliceblue;
+}
+.Social_media{
+  width: 15%;
+  display: flex;
+ justify-content: space-around;
+ flex-direction: column;
+}
+.Social_media div{
+  display: flex;
+ /* align-items: center; */
+}
+
+.Social_media div:last-child{
+  width: 80%;
+  display: flex;
+  color: aliceblue;
+  justify-content: space-between;
+}
+
+.footer_top{
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+.abouth{
+  width: 65%;
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.abouth div{
+  display: flex;
+  flex-direction: column;
+}
+
+.abouth div a{
+  font-size: 94%;
+  /* font-weight: 600; */
+ 
+padding: 8px 0px;
+}
+
+.newsletter{
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+}
+.newsletter div{
+  margin-top: 20px;
+  width: 80%;
+  height: 80%;
+/* border: 1px solid red; */
+}
+
+.newsletter div input{
+  height: 40px;
+  width: 70%;
+  border-radius:10px 0px 0px 10px;
+  background-color: #1c1c1c;
+  border: 2px solid #747474;
+  color: aliceblue;
+  text-align: justify;
+}
+.newsletter div input:focus{
+  outline: #747474;
+  
+}
+.newsletter div input::placeholder{
+  font-size: 17px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Wix Madefor Text', sans-serif;
+}
+.newsletter p{
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Wix Madefor Text', sans-serif;
+  font-weight: 500;
+  padding-right:30px ;
+  line-height: 20px;
+}
+.newsletter #terms_con{
+  text-decoration: underline;
+}
+.newsletter div button{
+  width: 29%;
+  height: 45px;
+  padding-bottom: 4px;
+  border: none;
+  /* border: 2px dolid #747474; */
+  border-radius: 0px 10px 10px 0px;
+  margin-left: -10px;
+  background-color: #747474;
+  color: #1c1c1c;
+  font-size: 16px;
+}
+.footer-bottom{
+  padding-top:80px ;
+  text-align: center;
+  margin: auto;
+ 
+}
+/* ____________________- */
       #loading {
         width: 100%;
         height: 100vh;
@@ -29,6 +288,7 @@
         height: 20px;
       }
       #container {
+        min-height: 85vh;
         display: flex;
         flex-flow: column;
         width: 40%;
@@ -50,7 +310,7 @@
         font-size: 100px;
         color: #f3f7fb;
       }
-      button {
+      #thank ~ button {
         width: 30%;
         height: 40px;
         margin: auto;
@@ -64,7 +324,7 @@
         padding: 10px 0;
         margin-bottom: 20px;
       }
-      button:hover {
+      #thank ~ button:hover {
         background-color: #066169;
       }
       h1 {
@@ -75,7 +335,51 @@
       }
     </style>
   </head>
-  <body onload="myFunction()">
+  <body id="body" onload="myFunction()">
+    <div id="navbar">
+      <!-- nav -->
+  <nav id="nav">
+          <div id="home">
+              <img src="home-logo.png" alt="home">
+          </div>
+          <div id="nav-mid">
+             <div>
+              <a href="#">MOUTAIN</a>
+              <a href="#">ROAD</a>
+              <a href="#">ACTIVA</a>
+              <a href="#">ELECTRIC</a>
+              <a href="#">KIDS</a>
+             </div>
+             <div id="nav_search_box">
+              <input type="search" placeholder="search...">
+              <button><i class="fa-solid fa-magnifying-glass fa-bounce fa-sm" style="color: #ffffff;"></i></button>
+             </div>
+             <div>
+              <p>+38 044 679 38 67</p>
+             </div>
+          </div>
+          <div id="nav-end">
+              <a href="#"><i class="fa-regular fa-heart fa-xl"></i></a>
+              <a href="#"><i class="fa-solid fa-circle-nodes fa-xl"></i></a>
+              <a href="#"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+              <button class="profile"><i class="fa-regular fa-user fa-lg"></i></button>
+          </div>
+  </nav>
+  <!-- subnav -->
+  <nav id="subnav">
+      <div>
+          <img src="icons8-location-40.png" alt="">
+          <p>Your location <span>Kiev</span></p>
+      </div>
+      <div>
+          <a href="#">About us</a>
+          <a href="#">Delivery</a>
+          <a href="#">Payment</a>
+          <a href="#">Contact</a>
+      </div>
+  </nav>
+  </div>
+      <div id="header"></div>
     <div id="loading"></div>
 
     <div id="container">
@@ -89,6 +393,82 @@
         Back to Home
       </button>
     </div>
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer_top">
+          <div class="Social_media">
+              <div>
+                  <img src="home-logo.png" alt="">
+              </div>
+              <div>
+                  <a href="#"><img src="icons8-youtube.svg" alt=""></a>
+                  <a href="#"><img src="icons8-facebook.svg" alt=""></a>
+                  <a href="#"><img src="icons8-linkedin-35.png" alt=""></a>
+                  <a href="#"><img src="icons8-instagram.svg" alt=""></a>
+              </div>
+          </div>
+          <div class="abouth">
+              <div>
+                  <h4>MOUTAIN</h4>
+                  <a href="#">Cross Country</a>
+                  <a href="#">Downhill</a>
+                  <a href="#">Dirt Jump</a>
+                  <a href="#">Frames</a>
+              </div>
+              <div>
+                  <h4>ROAD</h4>
+                  <a href="#">Performance</a>
+                  <a href="#">Gravel</a>
+                  <a href="#">Cyclocross</a>
+                  <a href="#">Triathlon</a>
+              </div>
+              <div>
+                  <h4>ACTIVA</h4>
+                  <a href="#">Fitness</a>
+                  <a href="#">Transport</a>
+                  <a href="#">Comfort</a>
+              </div>
+              <div>
+                  <h4>ELECTRIC</h4>
+                  <a href="#">Road</a>
+                  <a href="#">Mountain</a>
+                  <a href="#">Active</a>
+              </div>
+              <div>
+                  <h4>KIDS</h4>
+                  <a href="#">Toddler</a>
+                  <a href="#">Little kids</a>
+                  <a href="#">Big kids</a>
+              </div>
+              <div>
+                  <h4>CUSTOMERS</h4>
+                  <a href="#">About us</a>
+                  <a href="#">Delivery</a>
+                  <a href="#">Payment</a>
+                  <a href="#">Contacts</a>
+              </div>
+              <div>
+                  <h4>SUPPORT</h4>
+                  <a href="#">Support center</a>
+                  <a href="#">Warranty</a>
+                  <a href="#">Bike registration</a>
+                  <a href="#">Shipping&Delivery</a>
+              </div>
+          </div>
+          <div class="newsletter">
+                 <h4>NEWSLETTER</h4>
+                 <div>
+                  <input type="text" class="news_join" placeholder="Join Our newsletter">
+                  <button>JOIN</button>
+                 </div>
+                 <p >By submitting your email address you agree to
+                  the <span><a href="#" id="terms_con"> Terms & Conditions</a></span></p>
+          </div>
+      </div>
+      <div class="footer-bottom">
+            <p>© 1997 - 2022. Specialized Bicycle Components, Inc. All Rights Reserved</p>
+      </div>
+  </footer>
   </body>
   <script>
     var preloader = document.getElementById("loading");
