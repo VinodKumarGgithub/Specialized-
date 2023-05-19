@@ -17,19 +17,21 @@ const main = async ()=>{
 }
 main()
 
+function catPage(){
+    window.location.href ="category/category.html"
+}
 function displaydata(data){
 document.querySelector(".h_bcycles").textContent=""
 data.map(function(ele,i){
     
     let box = document.createElement("div")
-    box.addEventListener("click",()=>{
-        localStorage.setItem("item",ele.id);
-        // window.location.href="#"
-    })
     let img = document.createElement("img")
     
     let title = document.createElement("p")
-
+     title.addEventListener("click",()=>{
+        localStorage.setItem("item",ele.id);
+        window.location.href="itempage.html"
+    })
     if(i==0 || i==11){
         img.src="./logos/s-works1.png"
         title.textContent = "S-Works Shiv TT Disc"
@@ -130,7 +132,7 @@ function suggetion_box(data){
         box.textContent= ele.productdescriptionname
         box.addEventListener("click",()=>{
           localStorage.setItem("item",ele.id)
-        //   window.location.href="item.page"
+          window.location.href="itempage.html"
         })
 
         document.getElementById("sugge_box").append(box)
