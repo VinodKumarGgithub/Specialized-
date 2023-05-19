@@ -530,21 +530,21 @@ font-family: 'Wix Madefor Text', sans-serif;
     border-radius: 10vh;
     font-size: 1.61vh;
     font-weight: bold;
-    color: white;
+    color: aliceblue;
     width: 8.59vw;
-    margin-right: 1vw;
+    margin-right: 2vw;
+    margin-top: 25px;
   }
   #WishlistBtns > button:hover {
     background-color: #e20308;
   }
   #removeFromWish {
-    margin-top: 0.3vh;
+    margin-top: 4vh;
     padding: 0.5vh;
+    font-size: 14px;
+color: rgb(195, 15, 15);
   }
-  #removeFromWish > svg {
-    fill: red;
-    height: 3.3vh;
-  }
+  
   #row > * {
     padding: 1.5vh 0;
   }

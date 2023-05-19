@@ -57,7 +57,7 @@ const displayData = (data) => {
 
     Price = document.createElement("p");
 
-    Price.innerText = ele.price;
+    Price.innerText = `€ ${ele.price}`;
     console.log(Price);
 
     col3.append(Price);
@@ -76,14 +76,7 @@ const displayData = (data) => {
     });
     let iconHeart = document.createElement("span");
     iconHeart.setAttribute("id", "removeFromWish");
-    iconHeart.innerHTML = `<svg
-    viewBox="0 0 24 24"
-    style="width: 2vw"
-    id="wishlistIcon"
-  >
-  <path d="M22 3.1c2.7 2.2 2.6 7.2.1 9.7-2.2 2.8-7.4 8.1-9.3 9.6-.5.4-1.1.4-1.6 0-1.8-1.5-7-6.8-9.2-9.6-2.6-2.6-2.7-7.6 0-9.7C4.6.5 9.7.7 12 4.2 14.3.8 19.3.5 22 3.1z"></path>
-    >
-  </svg>`;
+    iconHeart.innerHTML = `<i class="fa-regular fa-heart fa-xl"></i>`;
     iconHeart.addEventListener("click", () => {
       getDelete(index);
     });
@@ -107,6 +100,7 @@ function addToCartList(el) {
   let cartData = JSON.parse(localStorage.getItem("cartitem")) || [];
   cartData.push(el);
   localStorage.setItem("cartitem", JSON.stringify(cartData));
+  
 }
 
 function home(){
