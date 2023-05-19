@@ -84,7 +84,6 @@ data.map(function(ele,i){
 
 // slider
 let slider = document.getElementsByName("slider")
-console.log(document.getElementsByName("slider"));
 let slide_c=0
 
 setInterval(()=>{
@@ -106,14 +105,17 @@ if(slide_c==slider.length-1){
 // _____________Search_box____________
 document.getElementById("search").addEventListener("keyup",search)
 let timer
-function search(){
+function search(event){
     clearTimeout(timer)
     let query =document.getElementById("search").value
+    console.log(event.key);
     timer = setTimeout(async ()=>{
         // console.log(query);
       let data =await fetchdata(`https://specialized.onrender.com/products?q=${query}`)
         console.log(data);
         suggetion_box(data)
+        if(event.key=="Enter")
+         location.href="category/category.html"
         localStorage.setItem("product-list",JSON.stringify(data))
     },400)
 }
@@ -143,3 +145,14 @@ function suggetion_box(data){
 document.querySelector("body").addEventListener("click",()=>{
     document.getElementById("sugge_box").style.display="none"
 })
+
+function notification(){
+    let show = document.getElementById("notification")
+    if(show)
+      show.setAttribute("id","notification_pop")
+  }
+
+  function logout() {
+    localStorage.clear("logged");
+    window.location.href="index.html"
+}  

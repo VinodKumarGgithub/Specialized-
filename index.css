@@ -1,7 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&family=Wix+Madefor+Text:wght@600&display=swap');
  
+/* notification  */
+#notification{
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 13%;
+    left: 78%;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    color: aliceblue;
+     background-image: linear-gradient(-198deg, #262626 0%, #262626 48%, #422F0B 100%);
+}
+#notification_pop{
+    display: none;
+}
+#notification p+button{
+    border: none;
+    background-color: transparent;
+    color: rgb(215, 98, 98);
+    border: 1px solid #c68409;
+    padding: 5px 15px;
+    color: aliceblue;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+#notification button:first-child{
+    background-color: transparent;
+    border: none;
+    border: 1px solid #c68409;
+    color: aliceblue;
+    border-radius: 50%;
+    position:fixed;
+    right: 6%;
+    top: 14%;
+}
 
 /* nav____________________ */
+
 body{
     margin: 0;
     padding: 0;

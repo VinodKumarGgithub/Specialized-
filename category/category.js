@@ -48,12 +48,18 @@ function displaydata(data){
         }
         let button_box = document.createElement("div")
         let wish_btn =document.createElement("button")
-        wish_btn.innerHTML=`<i class="fa-regular fa-heart fa-xl"></i>`
+        wish_btn.innerHTML=`<i class="fa-regular fa-heart fa-lg"></i>`
+        wish_btn.style.color="black"
         wish_btn.addEventListener("click",()=>{
-            console.log(ele.id);
+            wish_btn.style.color= wish_btn.style.color=="black"? "red" : "black"
+            
         })
         let compare_btn = document.createElement("button")
-        compare_btn.innerHTML=`<i class="fa-solid fa-code-compare fa-xl"></i>`
+        compare_btn.innerHTML=`<i class="fa-solid fa-code-compare"></i>`
+        compare_btn.style.color="black"
+        compare_btn.addEventListener("click",()=>{
+            compare_btn.style.color= compare_btn.style.color=="black"? "green":"black"
+        })
         button_box.append(wish_btn,compare_btn)
         box.append(img,title,price,mrp,button_box)
         document.querySelector("#products").append(box)
@@ -138,4 +144,7 @@ for(let i=0; i<pages.length; i++){
         let data = await fetchdata(`https://specialized.onrender.com/products?_limit=9&_page=${i+1}`);
         displaydata(data);
     })
+}
+function home(){
+    location.href="../index.html"
 }

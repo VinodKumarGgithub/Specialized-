@@ -1,75 +1,11 @@
 
-
 import PassPage from "./otp.js";
 import { otpPage, loginPage } from "./otp.js";
 
 // Checking login ?
 let log_status = localStorage.getItem("logged") || "";
 
-// if (log_status) {
-
-//     document.getElementById('profile_dropdown').onchange = ()=>{
-//       let value = document.getElementById("profile_dropdown").value;
-//       if (value == "account"){
-//         location.href = "/profile/page/profile.html"
-
-//       }
-//       else if(value == "order"){
-//         location.href = "/profile/page/Myorder.html"
-//       }
-//       else if(value == "logout"){
-//         logout();
-//         localStorage.setItem('mycart', JSON.stringify([]));
-//             window.location.href="index.html"
-//       }
-//       console.log("profile path")
-//     }
-// } else {
-//   document.getElementById("login_box").innerHTML = `
-//     <a href="#" id="login" class="link">|  Login </a>
-//     <a href="#" id="Signup" class="link">|  Sign up </a>`;
-// }
-
-
-
-
 // logout
-
-
-// function logout() {
-//   if (document.getElementById("profile_dropdown")) {
-//     console.log("ho....");
-//     let value = document.getElementById("profile_dropdown").value;
-//     if (value == "logout") {
-//     //   localStorage.setItem("logged", "");
-//     //   window.location.href="index.html"
-//     let id = localStorage.getItem("logged");
-//         localStorage.setItem("logged", "");
-//         console.log(id);
-//         postdata();
-//         async function postdata() {
-//           try {
-//             let res = await fetch(
-//               `https://specialized.onrender.com/users/${id}`,
-//               {
-//                 method: "PATCH",
-//                 headers: {
-//                   "Content-Type": "application/json",
-//                 },
-//                 body: JSON.stringify({
-//                   login_status: false,
-//                 }),
-//               }
-//             );
-//             localStorage.setItem('mycart', JSON.stringify([]));
-//             window.location.href="index.html"
-//           } catch (error) {
-//             console.log(error);
-//           }
-//         }
-//     }
-//   }
-// }
 
 let user = [];
 let url = `https://specialized.onrender.com/users` || "";
@@ -79,9 +15,7 @@ async function getdata(url) {
   try {
     let res = await fetch(url);
     user = await res.json();
-    console.log(user);
     document.getElementById("login_btn").addEventListener("click", function () {
-      console.log("user data fetched...!");
       verify(user);
     });
   } catch (error) {
@@ -281,31 +215,11 @@ console.log(user);
     //otp verify
     if (Otp == enterd_pass) {
       wrong_pass.style.display = "none";
-      console.log("succfull..by number", Otp, enterd_pass);
       alert(`Your Temporary password :- ${password}`);
       localStorage.setItem("logged", user.length);
       window.location.href="index.html"
     }
   }
-
-  // if (!log_status) {
-  //   document.getElementById("close").addEventListener("click", closePopup);
-
-  //   function closePopup() {
-  //     document.getElementById("box").style.display = "none";
-  //   }
-
-  //   // show
-
-  //   document.querySelector(".profile").addEventListener("click", ()=>{
-  //         log_status? alert(`${log_status}`):showPopup()
-  //       });
-  //   // document.getElementById("Signup").addEventListener("click", showPopup);
-
-  //   function showPopup() {
-  //     document.getElementById("box").style.display = "block";
-  //   }
-  // }
 }
 
 if (!log_status) {
@@ -329,7 +243,9 @@ if (!log_status) {
   document.querySelector(".profile").addEventListener("click",foo);
 
   function foo(){
-    alert(`already logeed`)
+    let pop = document.getElementById("notification_pop")
+    pop.setAttribute("id","notification")
+    // alert(`already logeed`)
   }
 }
 

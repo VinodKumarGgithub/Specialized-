@@ -406,8 +406,9 @@ background-color: white;
     overflow: hidden; 
 }
 #products>div p+p{
-    font-size: 17px;
-    color: #4a4949;
+    font-size: 15px;
+    line-height: 10px;
+    color: #201e1e;
     font-weight: lighter;
 }
 #products>div p+p+p{
@@ -430,6 +431,7 @@ background-color: white;
  padding:6px;
  margin-right: 15px;
 }
+
 /* main div products styling
 
 #maindiv{
