@@ -1,0 +1,614 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #464445;
+}
+
+h2,h3,p{
+    color: #f1f1f3;
+}
+
+#main{
+    display: flex;
+    width: 90%;
+    gap: 10px;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+
+#imagecontainer{
+    width: 50%;
+}
+
+
+#rightdiv{
+    width: 50%;
+    
+}
+
+#mainimage{
+    /* border: 1px solid ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    /* background-color: #f1f1f3; */
+}
+
+#mainimage img{
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+#imagecontainer{
+    /* display: flex; */
+    /* border: 1px solid; */
+    /* flex-grow: 1;
+    width: calc(33.33% - 5px); */
+}
+
+#smallimages{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    margin-top: 12px;
+    
+    /* margin-left: 20px; */
+}
+#smallimages img{
+    /* width: 70%; */
+    width: 90%;
+    height: 51px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    /* margin-left: 18px; */
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 3px, rgba(0, 0, 0, 0.23) 0px 2px 3px; */
+    /* border: 0.1px solid gray; */
+    border-radius: 5px;
+    
+}
+/* #scroll-left,
+#scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#scroll-left {
+    left: 0;
+}
+
+#scroll-right {
+    right: 0;
+} */
+
+#smallimages img.active {
+    border: 2px solid grey;
+  }
+
+
+/* Ride side div */
+.star-icon {
+    color: rgb(152, 110, 3);
+    font-size: x-large;
+}
+.reviews-text{
+    font-size: 15px;
+    color: #a7a4a4;
+}
+
+#innerrightdiv{
+    width: 90%;
+    margin: auto;
+}
+#innerrightdiv > h2{
+    margin-top: 5px;
+}
+
+.circle-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    border: #f1f1f3;
+}
+
+.brown-button {
+    background-color: brown;
+    border: #f1f1f3;
+}
+
+.black-button {
+    background-color: black;
+    border: #f1f1f3;
+}
+
+.sizediv{
+    margin-left: 15px;;
+}
+.sizeboxdiv{
+    display: flex;
+    gap: 5px;
+
+}
+
+.small-box, .xsmall-box, .M-box {
+    background-color: #f1f1f3;
+    border-radius: 2px;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colorandsizediv{
+    display: flex;
+    gap: 30px;
+}
+
+
+.price{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+.mrp{
+    margin-bottom: 5px;
+    font-weight: 100;
+    color: #ababab;
+}
+/* Add to cart */
+
+.addtocartandquickorderdiv{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fa-heart{
+    font-size: 25px;
+    color:#db1f22;
+}
+
+.wishlistbtn{
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    height: 38px;
+    border-radius: 4px;
+    width: 38px;
+    cursor: pointer;
+}
+.addtocartbtn {
+  background-color: #db1f22;
+  border: 1px solid #db1f22;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  /* padding: 10px 25px; */
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 140px;
+  height: 38px;
+}
+
+
+.quickorderbtn {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    /* padding: 10px 25px; */
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 140px;
+    height: 38px;
+  }
+
+
+.addtocartbtn:hover , .quickorderbtn:hover{
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+.hr{
+    margin-bottom: 25px;
+    border-color: #a7a4a4;
+    border-width: 2px;
+}
+.hr2{
+    margin-top: 25px;
+    border-color: #a7a4a4;
+    border-width: 2px;
+}
+
+/* Static code  */
+/* Middle */
+
+#middlecomp{
+    display: flex;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#leftcomp{
+width: 50%;
+}
+
+#rightcomp{
+    width: 50%;
+}
+
+#characteristics{
+    background-color: #fdfdfd;
+    margin: auto;
+    border-radius: 5px;
+}
+
+#characteristics  h3{
+    color: #0f100f ;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+.carheadingdiv{
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    align-items: center;
+}
+#characteristics hr{
+    width: 94%;
+}
+.carheadingdiv p{
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #363736 ;
+}
+
+.more {
+    display: none;
+  }
+  
+.show {
+display: block;
+}
+
+#description{
+    background-color: #fdfdfd;
+    margin: auto;
+    border-radius: 5px;
+    
+}
+
+#description h3{
+    color: #0f100f ;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+#description p{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #363736 ;
+    font-size: 13px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+#readMoreLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(168, 168, 49);
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+.icon{
+    color: rgb(168, 168, 49);
+}
+  
+
+
+/*  */
+
+
+/* Rating box */
+#rating_div {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+#rtbox {
+    display: flex;
+}
+#rtsec {
+    color: #1AAB2A;
+    /* margin-top: -20px;
+    margin-bottom: -20px; */
+}
+#rbox_1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 12%;
+    padding-bottom: 10px;
+    border-right: 1px solid rgb(240, 240, 240);
+}
+ #rbox_1  h3{
+    color: #0f100f;
+}
+
+/* Three column layout */
+.side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.middle {
+    margin-top:15px;
+    float: left;
+    width: 70%;
+}
+
+  /* Place text to the right */
+.right {
+    text-align: right;
+}
+
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+  /* The bar container */
+.bar-container {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+  /* Individual bars */
+.bar-5 {
+    border-radius: 10px;
+    width: 60%; height: 10px; background-color: #1AAB2A;
+}
+.bar-4 {
+    border-radius: 10px;
+    width: 30%; height: 10px; background-color: #1AAB2A;
+}
+.bar-3 {
+    border-radius: 10px;
+    width: 12%; height: 10px; background-color: #1AAB2A;
+}
+.bar-2 {
+    border-radius: 10px;
+    width: 10%; height: 10px; background-color: orange;
+}
+.bar-1 {
+    border-radius: 10px;
+    width: 15%; height: 10px; background-color: red;
+}
+
+
+/* product added to cart modal  */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .popup h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .popup button {
+    background-color: #db1f22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+
+#space{
+    height: 50px;
+    background-color: #f8f8f8;
+}
+
+/* payment  */
+
+
+#payment{
+    background-color: #fdfdfd;
+    margin: auto;
+    border-radius: 5px;
+}
+
+
+
+#payment    h3{
+    color: #0f100f ;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+/* payment slider */
+.wrapper {
+    text-align: center;
+}
+.wrapper img{
+    width: 80%;
+    /* height: 80%; */
+}
+
+#selfdelivery, #warranty, #return{
+    background-color: #fdfdfd;
+    margin: auto;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+#selfdelivery   h3{
+    color: #0f100f ;
+    padding: 20px;
+}
+.fa-truck{
+    margin-right: 5px;
+}
+/*  */
+
+#warranty h3, #return h3{
+    color: #0f100f ;
+    padding: 20px;
+}
+
+#warranty span, #return span {
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+#rightcomp i{
+    color: #a26e13;
+}
+
+
+
+
+/* media queries start from here */
+/* @media screen and (min-width: 910px) and (max-width:1023px) {
+    #smallimages{
+        width: 90%;
+    }
+} */
+
+@media screen and (min-width: 910px) and (max-width:1070px) {
+    #smallimages img {
+      width: 70%;
+      height: 41px;
+    }
+  }
+  
+  /* Media query for even smaller screens */
+  @media (min-width: 576px) and (max-width:909px){
+    #smallimages img {
+      width: 60%;
+      height: 31px;
+    }
+  }
+
+
+  @media (min-width: 400px) and (max-width:575px){
+    #main{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 10px;
+        margin: auto;
+        margin-top: 20px;
+        
+    }
+
+    #middlecomp{
+        display: flex;
+        flex-direction: column;
+    }
+    #smallimages img {
+        width: 40%;
+        height: 31px;
+      }
+
+    #imagecontainer {
+        width: 90%;
+        margin: auto;
+    }
+    #rightdiv{
+        width: 90%;
+        margin: auto;
+    }
+    #middlecomp{
+        width: 90%;
+        margin: auto;
+    }
+    #leftcomp{
+        width: 90%;
+        margin: auto;
+    }
+
+    #rightcomp{
+        width: 90%;
+        margin: auto;
+    }
+  }
