@@ -1,6 +1,6 @@
 
-const id=1;
-
+const id= localStorage.getItem("item") || 1;
+let cart = JSON.parse(localStorage.getItem("cart-list")) || []
 
 
 
@@ -34,13 +34,13 @@ function displayproduct(data){
         //document.getElementById("smallimages").append(image3);
 
         let image4 = document.createElement("img");
-        image4.src = elem.image4;
+        image4.src = elem.image.img4;
 
         let image5 = document.createElement("img");
-        image5.src = elem.image5;
+        image5.src = elem.image.img5;
 
         let image6 = document.createElement("img");
-        image6.src = elem.image6;
+        image6.src = elem.image.img6;
 
         document.getElementById("smallimages").append(image1,image2,image3, image4, image5);
        
@@ -121,7 +121,6 @@ function displayproduct(data){
         addtocartbtn.setAttribute("class","addtocartbtn");
         addtocartbtn.addEventListener("click", 
         function(){
-            
             addtoCart(elem, addtocartbtn);
         } );
         addtocartbtn.textContent = "ADD TO CART";
@@ -184,8 +183,8 @@ readMoreLink.addEventListener("click", function(event) {
 
 
 function addtoCart(elem,addtocartbtn){
-    localStorage.setItem("cartid", elem.id);
-    
+    cart.push(elem)
+    localStorage.setItem("cart-list",JSON.stringify(cart))
     addtocartbtn.textContent = "ADDING...";
     console.log(addtocartbtn.textContent)
     setTimeout(function() {
