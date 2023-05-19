@@ -13,7 +13,7 @@ const fetchdata =async (path)=>{
     console.log(error);
    }
 }
-
+let wishArr=[]
 const main = async ()=>{
     let data = await fetchdata(url)
    let Data = JSON.parse(localStorage.getItem("product-list")) || data

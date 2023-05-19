@@ -217,3 +217,6 @@ function addtoWishlist(elem) {
   console.log(wishlistitem);
   localStorage.setItem("wishlistitem", JSON.stringify(wishlistitem));
 }
+function home(){
+    location.href="index.html"
+}
