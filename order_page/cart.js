@@ -60,7 +60,7 @@ function displayCart(data){
                 localStorage.setItem("cart_Value",sum);
                 // final price
         document.getElementById("displayMRP").textContent= "€" + sumMRP 
-        document.getElementById("finalmrp").textContent= "€" +sum 
+        document.getElementById("finalAmt").textContent= "€" +sum 
             }
         }) 
 
@@ -71,7 +71,7 @@ function displayCart(data){
             finmrp.textContent="€ "+ ele.price*qnty.value ;   
             // final price
         document.getElementById("displayMRP").textContent= "€" + sumMRP 
-        document.getElementById("finalmrp").textContent= "€" +sum 
+        document.getElementById("finalAmt").textContent= "€" +sum 
         localStorage.setItem("cart_Value",sum);
         });
 
@@ -87,10 +87,12 @@ function displayCart(data){
 
         del.addEventListener("click",function(){
             data.splice(i, 1);
+            sum-=ele.price 
+            sumMRP-=ele.mrp
             localStorage.setItem("cart",JSON.stringify(data));
             // final price
         document.getElementById("displayMRP").textContent= "€" + sumMRP 
-        document.getElementById("finalmrp").textContent= "€" +sum 
+        document.getElementById("finalAmt").textContent= "€" +sum 
             displayCart(data);  
         });
 
