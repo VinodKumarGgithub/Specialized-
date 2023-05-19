@@ -111,7 +111,7 @@ function suggetion_box(data){
         box.textContent= ele.productdescriptionname
         box.addEventListener("click",()=>{
           localStorage.setItem("item",ele.id)
-          window.location.href="itempage.html"
+          window.location.href="../itempage.html"
         })
 
         document.getElementById("sugge_box").append(box)
