@@ -281,6 +281,7 @@ font-family: 'Wix Madefor Text', sans-serif;
   padding:20px;
   width:700px;
   background: #fff;
+  border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
 }
 
@@ -303,6 +304,7 @@ font-family: 'Wix Madefor Text', sans-serif;
 
 .container form .row .col .inputBox{
   margin:15px 0;
+  border-radius: 5px;
 }
 
 .container form .row .col .inputBox span{
@@ -316,6 +318,7 @@ font-family: 'Wix Madefor Text', sans-serif;
   padding:10px 10px;
   font-size: 15px;
   text-transform: none;
+  border-radius: 5px;
 }
 
 .container form .row .col .inputBox input:focus{
