@@ -268,6 +268,7 @@ Body {
   }
   
   .Container {
+    margin-bottom: -230px;
     display: Flex;
     flex-flow: Column;
     height: 100%;
@@ -343,5 +344,9 @@ Body {
       width: 30%;
       text-align: center;
       color: rgb(238, 227, 227);
+  }
+
+  #verify{
+    margin-top: 140px;
   }
   
