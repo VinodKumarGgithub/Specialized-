@@ -51,7 +51,15 @@ function displaydata(data){
         wish_btn.innerHTML=`<i class="fa-regular fa-heart fa-lg"></i>`
         wish_btn.style.color="black"
         wish_btn.addEventListener("click",()=>{
-            wish_btn.style.color= wish_btn.style.color=="black"? "red" : "black"
+            if(wish_btn.style.color=="black"){
+                wish_btn.style.color="red"
+                wishArr.push(ele)
+                localStorage.setItem("wishlistitem",JSON.stringify(wishArr))
+            }else if(wish_btn.style.color=="red"){
+                wish_btn.style.color="black"
+                wishArr.splice(i,1);
+                localStorage.setItem("wishlistitem",JSON.stringify(wishArr))
+            }
             
         })
         let compare_btn = document.createElement("button")
