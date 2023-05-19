@@ -538,7 +538,7 @@ letter-spacing: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 400ms ease;
+  transition: transform 1200ms ease;
   border-radius: 10px;
   box-shadow:  #422F0B 0px 5px 15px;
   box-shadow: #422F0B 0px 5px 5px, #422F0B 0px -12px 30px, #422F0B 0px 4px 6px, #422F0B 0px 12px 13px, #422F0B 0px -3px 5px;

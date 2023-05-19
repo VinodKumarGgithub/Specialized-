@@ -101,7 +101,7 @@ if(slide_c==slider.length-1){
 }else{
     slide_c++;
 }
-},3000)
+},4000)
 
 
 
