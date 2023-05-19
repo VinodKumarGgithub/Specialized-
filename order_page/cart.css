@@ -1,0 +1,150 @@
+body{
+    background-color: #484448;
+    
+}
+#header{
+    height: 30%;
+    background-color: rgb(94, 89, 89) ;
+}
+#footer{
+    height: 30%;
+}
+main{
+    /* background-color: aqua; */
+    font-family:Arial, Helvetica, sans-serif
+    
+}
+#mainDiv{
+    display: flex;
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 7px;
+}
+#mainDiv input{
+    width: 12%;
+    margin: 0px 5px;
+    text-align: center;
+}
+
+#mainDiv div{
+    margin: auto;
+    margin-left: 10px;
+/*  */
+    /* border: 1px solid red; */
+}
+#mainDiv img{
+    height: 120px;
+    /* border: 1px solid black; */
+    /* margin-left: 30%; */
+    /* padding: 30%     ; */
+}
+
+#mainDiv div:nth-child(5){
+    /* border: 1px solid black; */
+    /* width: 15%; */
+}
+    #dellogo{
+    width: 35%;
+    margin: auto;
+    padding-left: 10px;            
+
+    /* border: 1px solid red; */
+}
+#delcart{
+    background-color: white;
+    border: none;        }
+ 
+#mainDiv div:nth-child(2){
+    margin-left: 20px;
+    width: 85%;
+
+    /* border: 2px solid green; */
+}
+#mainDiv div:nth-child(3) button:nth-child(1){
+    /* margin-left: 0px; */
+    /* width: 15%; */
+    margin-left: 20px;
+    /* margin: auto; */
+}
+#mainDiv div:nth-child(4){
+    /* margin-left: 0px;     */
+    width: 30%;
+    padding:0% 1%;
+    /* margin: auto; */
+}
+#orderitem{
+    width: 65%;
+    margin: auto;
+    /* border: 1px solid black; */
+    padding: 20px;
+}
+
+#orderitem h2  {
+    color: white ;
+}
+#orderitem h3 {
+    color: white ;
+}
+#orderDetails{
+    display: flex;
+    width: 65%;
+    border: 1px solid black;
+    padding: 15px 10px;
+    background-color: white;
+    border-radius: 7px;
+    
+}
+#orderDetails div i{
+    margin-left: 30%;
+    
+}
+
+
+
+#detailsAmount{
+    display: flex;
+    margin: auto;
+}
+#orderDetails div{
+    margin: 5px;
+    
+}
+/* #orderDetails {
+    margin-left: 30%;
+    
+} */
+#amount{
+    border: 1px solid black;
+    display: flex;
+    width: 34%;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 7px;
+}
+#amount button{
+    height: 30%;
+    background-color: red;
+    color: white;
+    padding: 12px;
+    border-radius: 3px;
+}
+#displayMRP,#displayMRPCart  {
+    text-decoration-line: line-through;
+    font-size: 16px;
+    
+}
+
+#displayMRPfynl ,#finalAmt{
+    color: green;
+    font-size: 18px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+#orderitem {
+    width: 95%;
+}
+    }
+
+
