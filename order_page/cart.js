@@ -10,7 +10,7 @@
     let sum=0;
 function displayCart(data){
     document.querySelector("#cart").textContent="";
-    
+    console.log(data,sum);
     data.map((ele,i)=>{
         
         let div=document.createElement("div");
@@ -24,7 +24,7 @@ function displayCart(data){
         let productdescriptionname=document.createElement("h4");
         productdescriptionname.textContent=ele.productdescriptionname
         let code=document.createElement("p");
-        code.textContent=ele.id;
+        code.textContent="2456155";
         let MRP=document.createElement("p");
         MRP.textContent="€ "+ele.mrp 
         MRP.id="displayMRPCart";
@@ -108,8 +108,13 @@ function displayCart(data){
 
         // final price
         document.getElementById("displayMRP").textContent= "€" + sumMRP 
-   document.getElementById("finalmrp").textContent= "€" +sum 
+     document.getElementById("finalAmt").textContent= "€" +sum 
     });
 
 } 
 displayCart(data);
+
+
+function home(){
+    location.href = "../index.html"
+}

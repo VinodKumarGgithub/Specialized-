@@ -200,7 +200,8 @@ function addtoCart(elem,addtocartbtn){
         // Add an event listener to the "Proceed to Cart" button that will redirect to the cart page
         var proceedToCartBtn = document.getElementById("proceed-to-cart-btn");
         proceedToCartBtn.addEventListener("click", function() {
-            window.location.href = "cart.html";
+            window.location.href = "./order_page/order.html";
+            console.log("hi...");
         });
 
         setTimeout(function() {

@@ -203,7 +203,7 @@ main{
 }
 #mainDiv{
     display: flex;
-    background-color: aliceblue;
+    background-color: white;
     margin-bottom: 15px;
     border-radius: 7px;
 }
@@ -232,10 +232,6 @@ main{
     /* padding: 30%     ; */
 }
 
-#mainDiv div:nth-child(5){
-    /* border: 1px solid black; */
-    /* width: 15%; */
-}
     #dellogo{
     width: 35%;
     margin: auto;
@@ -244,7 +240,7 @@ main{
     /* border: 1px solid red; */
 }
 #delcart{
-    background-color: aliceblue;
+    background-color: transparent;
     border: none;        }
  
 #mainDiv div:nth-child(2){
@@ -271,7 +267,10 @@ main{
     /* border: 1px solid black; */
     padding: 20px;
     font-weight: lighter;
-    color: rgba(240, 248, 255, 0.578)
+    color: #1c1c1c;
+}
+#orderitem>p{
+color: aliceblue;
 }
 
 #orderitem h2{
