@@ -293,16 +293,22 @@ Body {
     font-size: 20px;
     caret-color: transparent;
     /* background: #0b1d1f; */
-    background: #0cc443;
+    background: transparent;
+    border: 2px solid rgba(128, 128, 128, 0.637);
     /* color: #f3f7fb; */
+    color: aliceblue;
   }
-  
+  Input:focus{
+    outline: none;
+  }
   H1 {
     text-align: Center;
     font-family: Arimo;
     /* color: #237981; */
       /* color: #0e1a1b; */
-      color: #019aa8;
+      color: rgba(240, 248, 255, 0.745);
+      letter-spacing: 5px;
+    font-family: 'Raleway', sans-serif;
       margin-top: 20px;
   }
   #btn {
@@ -316,19 +322,21 @@ Body {
     height: 40px;
     
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
-    background-color: rgb(25, 194, 25);
-    color: white;
+    background-color: transparent;
+    color: aliceblue;
     font-size: 16px;
     padding: 10px 0;
+    border: 1px solid #c68409;
   }
   button:hover {
     /* background-color: rgb(3, 90, 3); */
-    background: #596461;
+    background: #1c1c1c9d;
+    transform: scale(1.02);
   }
   #verify {
-      color: rgb(25, 194, 25);
+      color: rgba(240, 248, 255, 0.532);
       text-align: center;
       font-size: 50px;
       margin-bottom: 50px;
@@ -341,7 +349,9 @@ Body {
       margin-top: -10px;
       margin-bottom: -100px;
       font-size: 20px;
-      width: 30%;
+      letter-spacing: 2px;
+      width: 70%;
+      font-weight: lighter;
       text-align: center;
       color: rgb(238, 227, 227);
   }
