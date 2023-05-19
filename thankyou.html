@@ -276,6 +276,7 @@ font-family: 'Wix Madefor Text', sans-serif;
       body {
         /* background-color: white; */
         background-color: #1f2322;
+        background-image: url("./logos/thankyou_bg.png");
       }
       #companylogo {
         display: flex;
@@ -284,76 +285,53 @@ font-family: 'Wix Madefor Text', sans-serif;
         margin-top: -30px;
         margin-bottom: -30px;
       }
-      #companylog0 img {
-        height: 20px;
-      }
+      
       #container {
-        margin-top: 150px !important;
-        display: flex;
-        flex-flow: column;
-        width: 40%;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        margin-top: 50px;
-        background-color: #f3f7fb;
-        border-radius: 20px 20px 20px 20px;
-        box-shadow: 10px 15px 15px rgb(191, 189, 189);
+      position: fixed;
+      top: -2%;
+      text-align: center;
+      left: 5%;
+      
       }
       #logo {
-        background-color: #1b95a0;
         width: 100%;
-        border-radius: 20px 20px 0 0;
-        text-align: center;
-        margin: 0;
         padding: 20px 0;
         font-size: 100px;
-        color: #f3f7fb;
-      }
-      #thank ~ button {
-        width: 30%;
-        height: 40px;
-        margin: auto;
-        margin-top: 30px;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        background-color: #1b95a0;
-        color: white;
-        font-size: 16px;
-        padding: 10px 0;
-        margin-bottom: 20px;
-      }
-      #thank ~ button:hover {
-        background-color: #066169;
+        color: aliceblue;
       }
       h1 {
-        color: #1b95a0;
+        color: aliceblue;
+        letter-spacing: 5px;
+        font-size: 45px;
       }
+      
       #thank{
-        margin-left:10px
+        margin-left:10px;
+       color: aliceblue;
+       font-size: 18px;
+       letter-spacing: 2px;
+      } 
+      button{
+        border: none;
+        background-color: transparent;
+        color: aliceblue;
+        font-size: 17px;
+        border: 2px solid #c68409;
+        padding: 10px 15px;
+        border-radius: 5px;
       }
     </style>
   </head>
   <body id="body" onload="myFunction()">
-    <div id="navbar">
-      <!-- nav -->
-  <nav id="nav">
-          <div id="home">
-              <img src="./logos/home-logo.png" alt="home">
-          </div>
-         
-          </div>
-  </nav>
-  </div>
+ 
       <div id="header"></div>
     <div id="loading"></div>
 
     <div id="container">
-      <h1 id="logo"><i class="fa-regular fa-circle-check"></i></h1>
+      <h1 id="logo"><i class="fa-regular fa-circle-check fa-fade"></i></h1>
       <h1>Your Payment is Successful !</h1>
       <p id="thank">
-        Thankyou for your payment. An automated receipt will be sent to your
+        Thankyou for your payment.<br/> An automated receipt will be sent to your
         registered email.
       </p>
       <button onclick="window.location.href='index.html'">
@@ -362,15 +340,8 @@ font-family: 'Wix Madefor Text', sans-serif;
     </div>
  
   </body>
-  <script>
-    var preloader = document.getElementById("loading");
-
-    function myFunction() {
-        preloader.style.display ='none';
-    }
+  <script src="thankyou.js">
+  
   </script>
 </html>
-<script
-  src="https://kit.fontawesome.com/3244e8e1e6.js"
-  crossorigin="anonymous"
-></script>
+<scriptsrc="https://kit.fontawesome.com/3244e8e1e6.js" crossorigin="anonymous"></script>

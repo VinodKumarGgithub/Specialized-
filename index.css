@@ -260,7 +260,9 @@ text-decoration: none;
     box-shadow: #422F0B 0px 7px 30px 4px, #422F0B 0px 2px 16px 0px;
     /* box-shadow: #422F0B 5px 10px 15px 5px; */
 }
-
+.h_bcycles>div:hover,#bikesDis>div:hover{
+    transform: scale(0.97);
+}
 .h_bcycles>div img+p,#bikesDis>div img+p{
     font-size: 20px;
     font-weight: 700;
@@ -1052,8 +1054,7 @@ letter-spacing: 2px;
 }
 
 /* --------------- */
-.h_bcycles,#bikesDis{
-}
+
 .h_bcycles>div,#bikesDis>div{
     width: 50%;
     margin: 2%;

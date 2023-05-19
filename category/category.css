@@ -391,7 +391,9 @@ text-decoration: none;
     margin-left: 20%;
     
 }
-
+#products>div:hover{
+    transform: scale(0.97);
+}
 #products>div{
 background-color: white;
     border-radius: 5px;

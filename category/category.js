@@ -35,7 +35,7 @@ function displaydata(data){
         title.textContent=ele.productdescriptionname
         title.addEventListener("click",()=>{
             localStorage.setItem("item",ele.id);
-            window.location.href="#"
+            window.location.href="../itempage.html"
         })
         let price = document.createElement("p")
         price.textContent= `€ ${ele.price}`
@@ -111,7 +111,7 @@ function suggetion_box(data){
         box.textContent= ele.productdescriptionname
         box.addEventListener("click",()=>{
           localStorage.setItem("item",ele.id)
-        //   window.location.href="item.page"
+          window.location.href="itempage.html"
         })
 
         document.getElementById("sugge_box").append(box)
