@@ -1,39 +1,7 @@
-let obj=[
-    {
-       "name":"S-WORKS TURBO KENEVO SL",
-       "img":"https://www.shutterstock.com/image-photo/yellow-black-29er-mountainbike-thick-260nw-1498702814.jpg",
-       "id":7895647,
-       "amt": 35000, 
-       "fyamt": 15000, 
 
-    },
-    {
-        "name":"S-WORKS TURBO KENEVO SL",
-       "img":"https://www.shutterstock.com/image-photo/yellow-black-29er-mountainbike-thick-260nw-1498702814.jpg",
-       "id":7895648,
-       "amt": 20000, 
-       "fyamt": 12000, 
 
-    },        {
-        "name":"S-WORKS TURBO KENEVO SL",
-       "img":"https://www.shutterstock.com/image-photo/yellow-black-29er-mountainbike-thick-260nw-1498702814.jpg",
-       "id":7895649,
-       "amt": 15000, 
-       "fyamt": 7000, 
-
-    },        {
-        "name":"S-WORKS TURBO KENEVO SL",
-       "img":"https://www.shutterstock.com/image-photo/yellow-black-29er-mountainbike-thick-260nw-1498702814.jpg",
-       "id":78956,
-       "amt": 80000, 
-       "fyamt": 60000, 
-
-    }    
-]
-
-    localStorage.setItem("cart",JSON.stringify(obj));
     let sumMRP=0;
-    let data= JSON.parse(localStorage.getItem("cart")) || []
+    let data= JSON.parse(localStorage.getItem("cart-list")) || []
 
     // data.push(obj);
     // console.log(data);
@@ -53,16 +21,16 @@ function displayCart(data){
         img.src=ele.img;
         let divDetails=document.createElement("div");
         divDetails.id="detail";
-        let name=document.createElement("h5");
-        name.textContent=ele.name
+        let productdescriptionname=document.createElement("h4");
+        productdescriptionname.textContent=ele.productdescriptionname
         let code=document.createElement("p");
         code.textContent=ele.id;
         let MRP=document.createElement("p");
-        MRP.textContent="€ "+ele.amt +"/-";
+        MRP.textContent="€ "+ele.mrp 
         MRP.id="displayMRPCart";
-        let amt=document.createElement("p");
-        amt.textContent="€ "+ele.fyamt +"/-";
-        amt.id="displayMRPfynl";
+        let mrp=document.createElement("p");
+        mrp.textContent="€ "+ele.price 
+        mrp.id="displayMRPfynl";
 
         let qty=document.createElement("div");
         
@@ -74,39 +42,36 @@ function displayCart(data){
         let add=document.createElement("button");
         add.textContent="+";
         
-        let divFinalAmt=document.createElement("div");
-        let finamt=document.createElement("p");
+        let divFinalmrp=document.createElement("div");
+        let finmrp=document.createElement("p");
 
-          sum+=ele.fyamt; 
-          sumMRP+=ele.amt
-          console.log(sum);
-        finamt.textContent="€ "+ ele.fyamt *qnty.value + "/-";
-        // console.log(elem.amt);
-        // sum+=finamt;0
+          sum+=ele.price; 
+          sumMRP+=ele.mrp
+        finmrp.textContent="€ "+ ele.price *qnty.value ;
+        // sum+=finmrp;0
         disc.addEventListener('click',function(){
             if(qnty.value==1){
                 alert("Minimum Quantity could be 1")
             }else {
                 qnty.value--;
-                sum-=ele.fyamt 
-                sumMRP-=ele.amt
-                console.log(sum)
-                finamt.textContent="€ "+ ele.fyamt *qnty.value + "/-";
+                sum-=ele.price 
+                sumMRP-=ele.mrp
+                finmrp.textContent="€ "+ ele.price *qnty.value ;
                 localStorage.setItem("cart_Value",sum);
                 // final price
-        document.getElementById("displayMRP").textContent= "€" + sumMRP +" /-";
-        document.getElementById("finalAmt").textContent= "€" +sum +" /-";
+        document.getElementById("displayMRP").textContent= "€" + sumMRP 
+        document.getElementById("finalmrp").textContent= "€" +sum 
             }
         }) 
 
         add.addEventListener('click',function(){
             qnty.value++;
-            sum+=ele.fyamt 
-            sumMRP+=ele.amt
-            finamt.textContent="€ "+ ele.fyamt*qnty.value + "/-";   
+            sum+=ele.price 
+            sumMRP+=ele.mrp
+            finmrp.textContent="€ "+ ele.price*qnty.value ;   
             // final price
-        document.getElementById("displayMRP").textContent= "€" + sumMRP +" /-";
-        document.getElementById("finalAmt").textContent= "€" +sum +" /-";
+        document.getElementById("displayMRP").textContent= "€" + sumMRP 
+        document.getElementById("finalmrp").textContent= "€" +sum 
         localStorage.setItem("cart_Value",sum);
         });
 
@@ -124,26 +89,26 @@ function displayCart(data){
             data.splice(i, 1);
             localStorage.setItem("cart",JSON.stringify(data));
             // final price
-        document.getElementById("displayMRP").textContent= "€" + sumMRP +" /-";
-        document.getElementById("finalAmt").textContent= "€" +sum +" /-";
+        document.getElementById("displayMRP").textContent= "€" + sumMRP 
+        document.getElementById("finalmrp").textContent= "€" +sum 
             displayCart(data);  
         });
 
         // append________________
         divImg.append(img);
         del.append(delimg);
-        divDetails.append(name, code, MRP, amt);
+        divDetails.append(productdescriptionname, code, MRP, mrp);
         qty.append(disc,qnty,add);
-        divFinalAmt.append(finamt);
+        divFinalmrp.append(finmrp);
         delet.append(del);
-        div.append(divImg, divDetails, qty, divFinalAmt, delet);
+        div.append(divImg, divDetails, qty, divFinalmrp, delet);
         cartItem.append(div);     
         // console.log(sum)     
         localStorage.setItem("cart_Value",sum);
 
         // final price
-        document.getElementById("displayMRP").textContent= "€" + sumMRP +" /-";
-   document.getElementById("finalAmt").textContent= "€" +sum +" /-";
+        document.getElementById("displayMRP").textContent= "€" + sumMRP 
+   document.getElementById("finalmrp").textContent= "€" +sum 
     });
 
 } 
