@@ -64,7 +64,7 @@ h2,h3,p{
 }
 #smallimages img{
     /* width: 70%; */
-    width: 90px;
+    width: 90%;
     height: 51px;
     /* padding-left: 10px;
     padding-right: 10px; */
@@ -193,6 +193,7 @@ h2,h3,p{
     height: 38px;
     border-radius: 4px;
     width: 38px;
+    cursor: pointer;
 }
 .addtocartbtn {
   background-color: #db1f22;
@@ -441,3 +442,173 @@ display: block;
     border-radius: 10px;
     width: 15%; height: 10px; background-color: red;
 }
+
+
+/* product added to cart modal  */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .popup h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .popup button {
+    background-color: #db1f22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+
+#space{
+    height: 50px;
+    background-color: #f8f8f8;
+}
+
+/* payment  */
+
+
+#payment{
+    background-color: #fdfdfd;
+    margin: auto;
+    border-radius: 5px;
+}
+
+
+
+#payment    h3{
+    color: #0f100f ;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+/* payment slider */
+.wrapper {
+    text-align: center;
+}
+.wrapper img{
+    width: 80%;
+    /* height: 80%; */
+}
+
+#selfdelivery, #warranty, #return{
+    background-color: #fdfdfd;
+    margin: auto;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+#selfdelivery   h3{
+    color: #0f100f ;
+    padding: 20px;
+}
+.fa-truck{
+    margin-right: 5px;
+}
+/*  */
+
+#warranty h3, #return h3{
+    color: #0f100f ;
+    padding: 20px;
+}
+
+#warranty span, #return span {
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+#rightcomp i{
+    color: #a26e13;
+}
+
+
+
+
+/* media queries start from here */
+/* @media screen and (min-width: 910px) and (max-width:1023px) {
+    #smallimages{
+        width: 90%;
+    }
+} */
+
+@media screen and (min-width: 910px) and (max-width:1070px) {
+    #smallimages img {
+      width: 70%;
+      height: 41px;
+    }
+  }
+  
+  /* Media query for even smaller screens */
+  @media (min-width: 576px) and (max-width:909px){
+    #smallimages img {
+      width: 60%;
+      height: 31px;
+    }
+  }
+
+
+  @media (min-width: 400px) and (max-width:575px){
+    #main{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 10px;
+        margin: auto;
+        margin-top: 20px;
+        
+    }
+
+    #middlecomp{
+        display: flex;
+        flex-direction: column;
+    }
+    #smallimages img {
+        width: 40%;
+        height: 31px;
+      }
+
+    #imagecontainer {
+        width: 90%;
+        margin: auto;
+    }
+    #rightdiv{
+        width: 90%;
+        margin: auto;
+    }
+    #middlecomp{
+        width: 90%;
+        margin: auto;
+    }
+    #leftcomp{
+        width: 90%;
+        margin: auto;
+    }
+
+    #rightcomp{
+        width: 90%;
+        margin: auto;
+    }
+  }

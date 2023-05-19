@@ -6,7 +6,7 @@ const id=1;
 
 const getdata= async () => {
     let url=`https://specializedcycle.onrender.com/products/?id=${id}`;
-    //let url =`https://ballalamit.github.io/tata1mgjsonserver/db.json?id=${id}`;
+    
     const response = await fetch(url);
     const data = await response.json();
     console.log(data)
@@ -119,9 +119,11 @@ function displayproduct(data){
         addtocartandquickorderdiv.setAttribute("class", "addtocartandquickorderdiv")
         let addtocartbtn= document.createElement("button");
         addtocartbtn.setAttribute("class","addtocartbtn");
-        addtocartbtn.addEventListener("click", function(){
+        addtocartbtn.addEventListener("click", 
+        function(){
             
-        })
+            addtoCart(elem, addtocartbtn);
+        } );
         addtocartbtn.textContent = "ADD TO CART";
 
         let quickorderbtn= document.createElement("button");
@@ -130,6 +132,12 @@ function displayproduct(data){
 
         let wishlistbtn= document.createElement("button");
         wishlistbtn.setAttribute("class","wishlistbtn");
+        wishlistbtn.addEventListener("click", 
+        function(){
+            
+            addtoWishlist(elem);
+        } );
+
         let heartIcon = document.createElement("i");
         heartIcon.setAttribute("class", "fas fa-heart");
         wishlistbtn.appendChild(heartIcon);
@@ -173,3 +181,40 @@ readMoreLink.addEventListener("click", function(event) {
   moreParagraph.classList.toggle("show");
   readMoreLink.textContent = moreParagraph.classList.contains("show") ? "- Read Less" : "+ Read More";
 });
+
+
+function addtoCart(elem,addtocartbtn){
+    localStorage.setItem("cartid", elem.id);
+    
+    addtocartbtn.textContent = "ADDING...";
+    console.log(addtocartbtn.textContent)
+    setTimeout(function() {
+        addtocartbtn.textContent = "ADDED ✔";
+
+        var popup = document.getElementById("order-summary-popup");
+        popup.querySelector(".product-name").textContent = elem.name;
+
+
+        // Show the popup
+        popup.style.display = "flex";
+
+        // Add an event listener to the "Proceed to Cart" button that will redirect to the cart page
+        var proceedToCartBtn = document.getElementById("proceed-to-cart-btn");
+        proceedToCartBtn.addEventListener("click", function() {
+            window.location.href = "cart.html";
+        });
+
+        setTimeout(function() {
+            addtocartbtn.textContent = "ADD TO CART";
+            popup.style.display = "none";
+        }, 3000);
+    }, 2000);
+}
+
+let wishlistitem = JSON.parse(localStorage.getItem("wishlistitem")) || [];
+
+function addtoWishlist(elem) {
+  wishlistitem.push(elem);
+  console.log(wishlistitem);
+  localStorage.setItem("wishlistitem", JSON.stringify(wishlistitem));
+}
