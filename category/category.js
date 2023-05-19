@@ -1,21 +1,25 @@
 
 
 
-let url = `https://specialized.onrender.com/products?_limit=24`
+let url = `https://specialized.onrender.com/products?_limit=9`
 const fetchdata =async (path)=>{
    try {
     let res = await fetch(`${path}`)
         res = await res.json();
+        console.log(res);
+
        return res;
    } catch (error) {
     console.log(error);
    }
 }
 
-
 const main = async ()=>{
     let data = await fetchdata(url)
-    displaydata(data);
+   let Data = JSON.parse(localStorage.getItem("product-list")) || data
+   console.log(JSON.parse(localStorage.getItem("product-list")) || data);
+   localStorage.clear("product-list")
+    displaydata(Data);
     localStorage.setItem("product-list",JSON.stringify(data))
 }
 main()
@@ -25,20 +29,21 @@ function displaydata(data){
     data.map(function(ele,i){
        
         let box = document.createElement("div")
-        box.addEventListener("click",()=>{
-            localStorage.setItem("item",ele.id);
-            // window.location.href="#"
-        })
         let img = document.createElement("img")
         img.src=ele.img
         let title = document.createElement("p")
         title.textContent=ele.productdescriptionname
+        title.addEventListener("click",()=>{
+            localStorage.setItem("item",ele.id);
+            window.location.href="#"
+        })
         let price = document.createElement("p")
         price.textContent= `€ ${ele.price}`
         price.setAttribute("id","price")
-        if(ele.mrp){
         let mrp = document.createElement("p")
-        mrp.textContent= ele.mrp
+        if(ele.mrp){
+       
+        mrp.textContent=`€ ${ele.mrp}`
         mrp.style.textDecoration = "line-through"
         }
         let button_box = document.createElement("div")
@@ -50,7 +55,7 @@ function displaydata(data){
         let compare_btn = document.createElement("button")
         compare_btn.innerHTML=`<i class="fa-solid fa-code-compare fa-xl"></i>`
         button_box.append(wish_btn,compare_btn)
-        box.append(img,title,price,button_box)
+        box.append(img,title,price,mrp,button_box)
         document.querySelector("#products").append(box)
     
     })
@@ -121,4 +126,16 @@ async function sort(){
     let data = await fetchdata(`https://specialized.onrender.com/products?&_limit=24`)
     displaydata(data)
    }
+}
+
+
+// ____________pagination__________________
+
+let pages = document.querySelectorAll(".link")
+console.log(pages.length);
+for(let i=0; i<pages.length; i++){
+    pages[i].addEventListener("click",async()=>{
+        let data = await fetchdata(`https://specialized.onrender.com/products?_limit=9&_page=${i+1}`);
+        displaydata(data);
+    })
 }

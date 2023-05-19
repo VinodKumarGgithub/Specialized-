@@ -278,7 +278,9 @@ text-decoration: none;
 #main{
     width: 90%;
     margin: auto;
-    margin-top: 160px;
+    padding:80px 5%;
+    margin-top: 120px;
+    background-color: #484448;
 }
 #main>div:first-child{
     display: flex;
@@ -286,8 +288,13 @@ text-decoration: none;
 }
 #main>div:first-child select{
     border: none;
-    background-color: transparent;
+    background-color: #484448;
+    color: aliceblue;
     margin: 0px 10px;
+}
+#main>div:first-child option{
+    background-color: transparent;
+    border-radius: 5px;
 }
 #maindiv{
     width: 100%;
@@ -302,39 +309,42 @@ text-decoration: none;
     width: 80%;
 }
 .pagination{
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content:flex-end;
-
+    margin-top: 30px;
 }
 .pagination ul{
     display: flex;
+    width: 60%;
     justify-content: space-evenly;
-}
-.pagination button{
-    border: none;
-    background-color: transparent;
-    border-radius: 5px;
-    color: aliceblue;
-    font-size: 10px;
-}
-.pagination ul li{
-    border: 1px solid gray;
-    padding: 3px;
-    font-size: 10px;
-    color: aliceblue;
-    border-radius: 5px;
+    list-style-type: none;
+    /* border: 1px solid red; */
+    margin-right: 10%;
 }
 
+.pagination ul li{
+    border: 2px solid rgba(107, 104, 104, 0.592);
+    padding: 8px 15px;
+    font-size: 14px;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.pagination ul li:hover{
+    background-color: #63635e;
+    border: 2px solid rgba(240, 248, 255, 0.56);
+    transform: scale(1.1);
+}
 #filterdiv{
     color: white;
-    font-size: 20px;
+    margin-top: -110px;
+    padding-top: 0;
 }
 #filterdiv>div{
     display: flex;
     justify-content: space-between;
     border-bottom:1px solid rgba(128, 128, 128, 0.329) ;
-    padding:20px 10px ;
+    padding:20px 0px ;
     z-index: -10;
 }
 #filterdiv>div button{
@@ -343,9 +353,10 @@ text-decoration: none;
   color: aliceblue;
   font-weight: 500;
   letter-spacing: 1px;
+  font-size: 14px;
 }
 #filterdiv>div div{
-    font-size: 5px;
+    font-size: 14px;
     font-weight: lighter;
 }
 
@@ -356,13 +367,17 @@ text-decoration: none;
     justify-content: flex-end;
 }
 #select{
-    background-color: #4a4949;
+    background-color:transparent;
     color: aliceblue;
     border: none;
     
 }
+#select option{
+    background-color: transparent;
+}
 #select:focus{
     outline: none;
+    background-color: transparent;
 }
 #products{
     display: grid;
@@ -386,11 +401,20 @@ background-color: white;
 }
 #products>div img+p{
     font-size: 18px;
+    line-height: 1.5em;
+    height: 1.4em;       /* height is 2x line-height, so two lines will display */
+    overflow: hidden; 
 }
 #products>div p+p{
     font-size: 17px;
     color: #4a4949;
     font-weight: lighter;
+}
+#products>div p+p+p{
+    line-height: 0px;
+    font-weight: lighter;
+    color: #4340439e;
+    font-size: 15px;
 }
 #products div img{
     height: 60%;
