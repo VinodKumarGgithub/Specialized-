@@ -131,13 +131,13 @@ document.getElementById("select").addEventListener("change",sort)
 async function sort(){
    let s= document.getElementById("select").value;
    if(s=="l-h"){
-   let data = await fetchdata(`https://specialized.onrender.com/products?_sort=price&_order=asc&_limit=24`)
+   let data = await fetchdata(`https://specialized.onrender.com/products?_sort=price&_order=asc&_limit=9`)
    displaydata(data)
    }else if(s=="h-l"){
-    let data = await fetchdata(`https://specialized.onrender.com/products?_sort=price&_order=desc&_limit=24`)
+    let data = await fetchdata(`https://specialized.onrender.com/products?_sort=price&_order=desc&_limit=9`)
     displaydata(data)
    }else if(s=="relevance"){
-    let data = await fetchdata(`https://specialized.onrender.com/products?&_limit=24`)
+    let data = await fetchdata(`https://specialized.onrender.com/products?&_limit=9`)
     displaydata(data)
    }
 }
