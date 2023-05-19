@@ -5,7 +5,7 @@ const id=1;
 
 
 const getdata= async () => {
-    let url=`https://specializedcycle.onrender.com/products/?id=${id}`;
+    let url=`https://specialized.onrender.com/products?id=${id}`;
     
     const response = await fetch(url);
     const data = await response.json();
@@ -19,18 +19,18 @@ function displayproduct(data){
     document.getElementById("mainimage").innerHTML=""
     data.map(elem =>{
         let image= document.createElement("img");
-        image.src = elem.image;
+        image.src = elem.image.img1;
         
         let image1= document.createElement("img");
-        image1.src = elem.image;
+        image1.src = elem.image.img1;
         image1.classList.add('active');
 
         let image2 = document.createElement("img");
-        image2.src = elem.image2;
+        image2.src = elem.image.img2;
         //document.getElementById("smallimages").append(image2);
 
         let image3 = document.createElement("img");
-        image3.src = elem.image3;
+        image3.src = elem.image.img3;
         //document.getElementById("smallimages").append(image3);
 
         let image4 = document.createElement("img");
@@ -49,7 +49,7 @@ function displayproduct(data){
         //right div code
 
         let name = document.createElement("h2");
-        name.innerText= elem.name;
+        name.innerText= elem.productdescriptionname;
 
         let starDiv = document.createElement("div");
         starDiv.innerHTML = '<span class="star-icon filled">★</span>' +
@@ -101,11 +101,11 @@ function displayproduct(data){
         //price code
 
         let mrp= document.createElement("h4");
-        mrp.innerText=elem.mrp;
+        mrp.innerText="$" + elem.mrp;
         mrp.setAttribute("class", "mrp")
         mrp.style.textDecoration = "line-through";
         let price= document.createElement("h3");
-        price.innerText=elem.price;
+        price.innerText= "$" + elem.price;
         price.setAttribute("class", "price")
         
         let pricediv= document.createElement("div");
@@ -192,7 +192,7 @@ function addtoCart(elem,addtocartbtn){
         addtocartbtn.textContent = "ADDED ✔";
 
         var popup = document.getElementById("order-summary-popup");
-        popup.querySelector(".product-name").textContent = elem.name;
+        popup.querySelector(".product-name").textContent = elem.productdescriptionname;
 
 
         // Show the popup

@@ -34,11 +34,11 @@ h2,h3,p{
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background-color: #f1f1f3;
+    /* background-color: #f1f1f3; */
 }
 
 #mainimage img{
-    width: 90%;
+    width: 100%;
     border-radius: 5px;
     
 }
