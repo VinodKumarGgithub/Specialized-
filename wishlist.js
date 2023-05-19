@@ -97,9 +97,9 @@ const getDelete = (index) => {
 //Adding item to Cartlist
 function addToCartList(el) {
   console.log(el);
-  let cartData = JSON.parse(localStorage.getItem("cartitem")) || [];
+  let cartData = JSON.parse(localStorage.getItem("cart-list")) || [];
   cartData.push(el);
-  localStorage.setItem("cartitem", JSON.stringify(cartData));
+  localStorage.setItem("cart-list", JSON.stringify(cartData));
   
 }
 
