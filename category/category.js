@@ -13,16 +13,18 @@ const fetchdata =async (path)=>{
     console.log(error);
    }
 }
-let wishArr=[]
+let wishArr=JSON.parse(localStorage.getItem("wishlistitem")) || []
+
 const main = async ()=>{
     let data = await fetchdata(url)
    let Data = JSON.parse(localStorage.getItem("product-list")) || data
-   console.log(JSON.parse(localStorage.getItem("product-list")) || data);
-   localStorage.clear("product-list")
     displaydata(Data);
     localStorage.setItem("product-list",JSON.stringify(data))
 }
-main()
+
+    main()
+
+
 
 function displaydata(data){
     document.querySelector("#products").textContent=""
